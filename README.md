@@ -103,6 +103,6 @@ Follow these steps to run the portfolio on your local machine:
 ## ✉️ Contact
 
 Feel free to connect or reach out for opportunities:
-* **LinkedIn:** [VThuongg](https://linkedin.com/in/VThuongg)
+* **LinkedIn:** [VThuongg](https://linkedin.com/in/vthuongg)
 * **GitHub:** [VThuongg](https://github.com/VThuongg)
-* **Live Portfolio:** [VThuongg.github.io](https://VThuongg.github.io)
+* **Live Portfolio:** [VThuongg.github.io](https://vthuongg.github.io/my-portfolio/)
