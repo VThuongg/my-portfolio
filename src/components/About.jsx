@@ -15,10 +15,10 @@ export function About({ aboutRef, aboutInView, language, t }) {
   "status": "Open for work 🚀"
 }`,
     "Stack.js": `const developer = {
-  languages: ["Java", "Python", "PHP", "JavaScript"],
-  frameworks: ["Spring Boot", "React"],
-  databases: ["MySQL", "PostgreSQL", "SQL Server"],
-  tools: ["GitHub", "Postman", "JUnit"]
+  languages: ["Python", "JavaScript", "SQL", "HTML/CSS"],
+  frameworks: ["React", "Next.js", "FastAPI"],
+  databases: ["Supabase", "PostgreSQL", "MySQL"],
+  tools: ["GitHub", "Postman", "Git"]
 };`,
     "Philosophy.txt": `"Code is read more than written.
 I strive for clean architecture,
