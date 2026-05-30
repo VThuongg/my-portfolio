@@ -1,46 +1,48 @@
-export function Hero({ heroRef, heroInView, scrollTo }) {
+export function Hero({ heroRef, heroInView, scrollTo, t }) {
   return (
     <section id="home" ref={heroRef} className="hero-section">
       <div className="hero-bg-circle" />
+      <div className="hero-bg-grid" />
 
       <div className="hero-container">
         {/* Left Column - Text Details */}
         <div className={`hero-content ${heroInView ? "in-view" : ""}`}>
           <div className="hero-tagline">
             <span className="hero-tagline-line" />
-            <span className="hero-tagline-text">FULL-STACK ENGINEER · AI/ML</span>
+            <span className="hero-tagline-text">{t("heroSubtitle")}</span>
           </div>
 
           <h1 className="hero-title">
-            Hi, I'm<br />
-            <span className="hero-title-name">Vo Thi Thuong</span>
+            {t("heroTitlePrefix")}<br />
+            <span className="hero-title-name gradient-text">Võ Thị Thương</span>
           </h1>
 
-          <p className="hero-desc">
-            Building scalable systems from backend to browser. Turning data into insight, code into real-world impact.
-          </p>
+          <p className="hero-desc">{t("heroDesc")}</p>
 
           <div className="hero-btns">
             <button
               onClick={() => scrollTo("Projects")}
               className="hero-btn-primary"
             >
-              View Projects →
+              {t("viewProjects")}
             </button>
             <a
-              href="#"
-              download
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo("Contact");
+              }}
               className="hero-btn-secondary"
             >
-              ↓ Download CV
+              {t("downloadCV")}
             </a>
           </div>
 
           <div className="hero-stats">
             {[
-              ["3+", "Projects"],
-              ["AI + Web", "Expertise"],
-              ["HCM City", "Vietnam 🇻🇳"],
+              [t("statProjectsVal"), t("statProjectsLabel")],
+              [t("statExpVal"), t("statExpLabel")],
+              [t("statLocVal"), t("statLocLabel")],
             ].map(([num, label]) => (
               <div key={label} className="hero-stat-item">
                 <p className="hero-stat-number">{num}</p>
@@ -53,10 +55,29 @@ export function Hero({ heroRef, heroInView, scrollTo }) {
         {/* Right Column - Avatar Visual */}
         <div className={`hero-avatar-col ${heroInView ? "in-view" : ""}`}>
           <div className="hero-avatar-wrapper">
+            <div className="hero-avatar-glow" />
             <div className="hero-avatar-content">
               <div className="hero-avatar-emoji">👩‍💻</div>
               <p className="hero-avatar-name">Võ Thị Thương</p>
               <p className="hero-avatar-title">Full-Stack · AI/ML</p>
+              <div className="hero-avatar-status">
+                <span className="status-dot animate-pulse"></span>
+                <span className="status-text">Open for work</span>
+              </div>
+            </div>
+
+            {/* Floating Tech Icons */}
+            <div className="floating-tech tech-react" style={{ "--float-delay": "0s" }}>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
+            </div>
+            <div className="floating-tech tech-spring" style={{ "--float-delay": "1.5s" }}>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" />
+            </div>
+            <div className="floating-tech tech-java" style={{ "--float-delay": "3s" }}>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+            </div>
+            <div className="floating-tech tech-js" style={{ "--float-delay": "4.5s" }}>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
             </div>
           </div>
         </div>
@@ -64,3 +85,4 @@ export function Hero({ heroRef, heroInView, scrollTo }) {
     </section>
   );
 }
+
