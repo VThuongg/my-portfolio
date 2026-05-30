@@ -7,15 +7,19 @@ export function Skills({ skillsRef, skillsInView, t }) {
 
   const categories = [
     { id: "all", labelKey: "filterAll" },
+    { id: "ai", labelKey: "filterAI" },
     { id: "frontend", labelKey: "filterFrontend" },
     { id: "backend", labelKey: "filterBackend" },
-    { id: "ai", labelKey: "filterAI" },
     { id: "tools", labelKey: "filterTools" },
   ];
 
   const filteredSkills = activeFilter === "all"
     ? SKILLS
-    : SKILLS.filter(skill => skill.category === activeFilter);
+    : SKILLS.filter(skill =>
+        Array.isArray(skill.category)
+          ? skill.category.includes(activeFilter)
+          : skill.category === activeFilter
+      );
 
   return (
     <section id="skills" className="skills-section">

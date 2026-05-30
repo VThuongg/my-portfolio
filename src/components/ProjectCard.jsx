@@ -60,7 +60,7 @@ export function ProjectCard({ project, index, t }) {
         
         <div className="project-card-header-row">
           <h3 className="project-card-title">{project.title}</h3>
-          <span className="project-card-badge">{t(project.category === "ai" ? "projFilterAI" : "projFilterWeb")}</span>
+          <span className="project-card-badge">{t(project.category === "ai" ? "badgeAI" : "badgeWeb")}</span>
         </div>
         
         <p className="project-card-subtitle">{project.subtitle}</p>

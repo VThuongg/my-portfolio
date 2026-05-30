@@ -7,6 +7,9 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = [
+  // AI / ML
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", level: 82, category: ["backend", "ai"], color: "#ca8a04" },
+
   // FRONTEND
   { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", level: 90, category: "frontend", color: "#e34f26" },
   { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg", level: 88, category: "frontend", color: "#1572b6" },
@@ -18,7 +21,6 @@ export const SKILLS = [
   { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg", level: 85, category: "backend", color: "#e11d48" },
   { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg", level: 88, category: "backend", color: "#16a34a" },
   { name: "REST API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg", level: 85, category: "backend", color: "#6BA539" },
-  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", level: 82, category: "backend", color: "#ca8a04" },
   { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg", level: 80, category: "backend", color: "#4f46e5" },
 
   // ORM / DATABASE
@@ -49,6 +51,18 @@ export const PROJECTS = [
     image: "/images/projects/protgo.png"
   },
   {
+    title: "MovieLens Analysis",
+    subtitle: "Data Science · Audience Satisfaction",
+    periodKey: "movielensPeriod",
+    descKey: "movielensDesc",
+    tags: ["Python", "Pandas", "XGBoost", "Matplotlib", "Seaborn"],
+    highlightKey: "movielensHighlight",
+    github: "https://github.com/VThuongg/movielens-analysis",
+    demo: null,
+    category: "ai",
+    image: "/images/projects/movielens.png"
+  },
+  {
     title: "Mobile Phone Store",
     subtitle: "Full-Stack · Management System",
     periodKey: "storePeriod",
@@ -71,18 +85,6 @@ export const PROJECTS = [
     demo: null,
     category: "web",
     image: "/images/projects/email.png"
-  },
-  {
-    title: "MovieLens Analysis",
-    subtitle: "Data Science · Audience Satisfaction",
-    periodKey: "movielensPeriod",
-    descKey: "movielensDesc",
-    tags: ["Python", "Pandas", "XGBoost", "Matplotlib", "Seaborn"],
-    highlightKey: "movielensHighlight",
-    github: "https://github.com/VThuongg/movielens-analysis",
-    demo: null,
-    category: "ai",
-    image: "/images/projects/movielens.png"
   },
 ];
 
@@ -158,6 +160,8 @@ export const TRANSLATIONS = {
     projFilterAll: "All Projects",
     projFilterAI: "AI & Data Science",
     projFilterWeb: "Web Apps",
+    badgeAI: "AI/ML",
+    badgeWeb: "Web App",
     contactLabel: "GET IN TOUCH",
     contactTitle: "Let's work together",
     contactDesc: "Open to full-time opportunities, freelance projects, or just a good tech conversation.",
@@ -170,7 +174,8 @@ export const TRANSLATIONS = {
     contactSendingBtn: "Sending...",
     contactSuccessMsg: "Thank you! Your message has been sent successfully.",
     contactErrorMsg: "Oops! Something went wrong, please try again.",
-    footerText: "Designed & Built by Võ Thị Thương",
+    footerText: "Designed & Built by Vo Thi Thuong",
+    ownerName: "Vo Thi Thuong",
     
     // Project Specific Translations
     protgoPeriod: "Jan 2026 – May 2026",
@@ -190,8 +195,8 @@ export const TRANSLATIONS = {
     timeline2026Desc: "Built ProtGO, an advanced deep learning system for protein function labeling. Surpassed benchmark models using lightweight multi-expert architectures.",
     timeline2025Title: "Full-Stack Web & Data Science",
     timeline2025Desc: "Developed full-stack management web apps and conducted statistical analyses on movie databases. Formulated robust unit & manual QA test cases.",
-    timeline2024Title: "Backend Engineering",
-    timeline2024Desc: "Built scalable server architectures using Spring Boot, Java, PHP, and modern relational databases (MySQL, PostgreSQL).",
+    timeline2024Title: "Foundational IT Knowledge",
+    timeline2024Desc: "Focused on learning core computer science concepts, software fundamentals, and built initial basic projects.",
     timeline2022Title: "Started IT Journey",
     timeline2022Desc: "Entered university, laying strong foundations in computer science, software engineering, and software quality assurance."
   },
@@ -243,6 +248,8 @@ export const TRANSLATIONS = {
     projFilterAll: "Tất cả dự án",
     projFilterAI: "AI & Khoa học dữ liệu",
     projFilterWeb: "Web Apps",
+    badgeAI: "AI/ML",
+    badgeWeb: "Web App",
     contactLabel: "KẾT NỐI",
     contactTitle: "Cùng làm việc nhé",
     contactDesc: "Sẵn sàng đón nhận cơ hội làm việc toàn thời gian, dự án freelance hoặc đơn giản là một buổi trao đổi về công nghệ.",
@@ -256,6 +263,7 @@ export const TRANSLATIONS = {
     contactSuccessMsg: "Cảm ơn bạn! Lời nhắn của bạn đã được gửi đi thành công.",
     contactErrorMsg: "Ối! Đã có lỗi xảy ra, vui lòng thử lại.",
     footerText: "Thiết kế & Lập trình bởi Võ Thị Thương",
+    ownerName: "Võ Thị Thương",
 
     // Project Specific Translations
     protgoPeriod: "Tháng 1/2026 – Tháng 5/2026",
@@ -275,8 +283,8 @@ export const TRANSLATIONS = {
     timeline2026Desc: "Phát triển hệ thống học sâu ProtGO để tự động dự đoán chức năng protein. Vượt qua mô hình NetGO2 bằng việc sử dụng kiến trúc multi-expert hiệu năng cao.",
     timeline2025Title: "Lập trình Web & Khoa học dữ liệu",
     timeline2025Desc: "Thiết kế hệ thống web quản lý cửa hàng và thực hành kiểm thử QA. Thực hiện các nghiên cứu thống kê lớn trên cơ sở dữ liệu phim ảnh.",
-    timeline2024Title: "Phát triển Backend",
-    timeline2024Desc: "Xây dựng các hệ thống máy chủ và RESTful API sử dụng Spring Boot, Java, PHP kết hợp với các cơ sở dữ liệu quan hệ (MySQL, PostgreSQL).",
+    timeline2024Title: "Kiến thức nền tảng & Dự án cơ bản",
+    timeline2024Desc: "Học tập, nắm vững các kiến thức cơ sở ngành và thực hiện các dự án nhỏ, cơ bản để làm quen với lập trình.",
     timeline2022Title: "Bắt đầu con đường CNTT",
     timeline2022Desc: "Nhập học ngành CNTT, xây dựng nền tảng tư duy lập trình vững chắc về cấu trúc dữ liệu, thuật toán, OOP và kiểm thử phần mềm."
   }

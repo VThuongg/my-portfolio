@@ -890,11 +890,11 @@ body,
   border-color: rgba(22, 163, 74, 0.4);
 }
 
-.tech-java {
+.tech-python {
   top: 30px;
   left: -30px;
-  box-shadow: 0 8px 30px rgba(225, 29, 72, 0.25);
-  border-color: rgba(225, 29, 72, 0.4);
+  box-shadow: 0 8px 30px rgba(202, 138, 4, 0.25);
+  border-color: rgba(202, 138, 4, 0.4);
 }
 
 .tech-js {
@@ -1561,9 +1561,23 @@ body,
 }
 
 @media (max-width: 768px) {
+  .carousel-arrow-btn {
+    display: none !important;
+  }
+
+  .projects-carousel-wrapper {
+    gap: 0;
+  }
+
+  .projects-grid.carousel-grid {
+    gap: 16px;
+    padding: 10px 0px 20px;
+  }
+
   .projects-grid.carousel-grid .project-card {
     flex: 0 0 290px;
     width: 290px;
+    max-width: calc(100vw - 48px);
   }
 
   .projects-filter-nav {
@@ -1754,6 +1768,8 @@ body,
   padding: 4px 10px;
   border-radius: 99px;
   border: 1px solid var(--highlight-border);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .project-card-subtitle {
@@ -1775,7 +1791,6 @@ body,
   font-size: 13px;
   line-height: 1.6;
   margin-bottom: 14px;
-  flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1819,6 +1834,7 @@ body,
   border-top: 1px solid var(--border-color);
   padding-top: 16px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 /* Contact Section */

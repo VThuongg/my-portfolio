@@ -14,7 +14,7 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
 
           <h1 className="hero-title">
             {t("heroTitlePrefix")}<br />
-            <span className="hero-title-name gradient-text">Võ Thị Thương</span>
+            <span className="hero-title-name gradient-text">{t("ownerName")}</span>
           </h1>
 
           <p className="hero-desc">{t("heroDesc")}</p>
@@ -58,7 +58,7 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
             <div className="hero-avatar-glow" />
             <div className="hero-avatar-content">
               <div className="hero-avatar-emoji">👩‍💻</div>
-              <p className="hero-avatar-name">Võ Thị Thương</p>
+              <p className="hero-avatar-name">{t("ownerName")}</p>
               <p className="hero-avatar-title">Full-Stack · AI/ML</p>
               <div className="hero-avatar-status">
                 <span className="status-dot animate-pulse"></span>
@@ -73,8 +73,8 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
             <div className="floating-tech tech-spring" style={{ "--float-delay": "1.5s" }}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" />
             </div>
-            <div className="floating-tech tech-java" style={{ "--float-delay": "3s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+            <div className="floating-tech tech-python" style={{ "--float-delay": "3s" }}>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
             </div>
             <div className="floating-tech tech-js" style={{ "--float-delay": "4.5s" }}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />

@@ -8,7 +8,7 @@ export function About({ aboutRef, aboutInView, language, t }) {
 
   const fileContents = {
     "Bio.json": `{
-  "name": "Võ Thị Thương",
+  "name": "${t("ownerName")}",
   "role": "Full-Stack & AI/ML",
   "location": "Ho Chi Minh City 🇻🇳",
   "passion": "Building scalable software",
@@ -44,7 +44,7 @@ that creates a real-world impact."`
       { text: "$ node Stack.js", delay: 100 },
       { text: "⏳ Compiling code modules...", delay: 400 },
       { text: "✓ Stack verified and active.", delay: 800 },
-      { text: "🚀 Output: Võ Thị Thương is ready to scale your next product! ✨", delay: 1300 }
+      { text: `🚀 Output: ${t("ownerName")} is ready to scale your next product! ✨`, delay: 1300 }
     ];
 
     steps.forEach((step) => {
@@ -79,8 +79,8 @@ that creates a real-world impact."`
             
             <div className="about-tags">
               {[
-                ["Spring Boot", "#16a34a"],
                 ["Python", "#ca8a04"],
+                ["Spring Boot", "#16a34a"],
                 ["React", "#06b6d4"],
                 ["JavaScript", "#f7df1e"],
                 ["PHP", "#4f46e5"],
