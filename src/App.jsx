@@ -35,8 +35,8 @@ export default function Portfolio() {
   useEffect(() => {
     localStorage.setItem("language", language);
     document.title = language === "vi"
-      ? "Võ Thị Thương | Kỹ sư Full-Stack & AI/ML"
-      : "Vo Thi Thuong | Full-Stack Engineer & AI/ML";
+      ? "Võ Thị Thương | AI/ML & Kỹ sư Full-Stack"
+      : "Vo Thi Thuong | AI/ML & Full-Stack Engineer";
   }, [language]);
 
   useEffect(() => {

@@ -9,7 +9,7 @@ export function About({ aboutRef, aboutInView, language, t }) {
   const fileContents = {
     "Bio.json": `{
   "name": "${t("ownerName")}",
-  "role": "Full-Stack & AI/ML",
+  "role": "AI/ML & Full-Stack",
   "location": "Ho Chi Minh City 🇻🇳",
   "passion": "Building scalable software",
   "status": "Open for work 🚀"

@@ -27,11 +27,9 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
               {t("viewProjects")}
             </button>
             <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo("Contact");
-              }}
+              href="https://drive.google.com/file/d/1bXVjiRPcp5N6_Gw2_U6QcnyXNeOeUlql/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
               className="hero-btn-secondary"
             >
               {t("downloadCV")}
@@ -59,7 +57,7 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
             <div className="hero-avatar-content">
               <div className="hero-avatar-emoji">👩‍💻</div>
               <p className="hero-avatar-name">{t("ownerName")}</p>
-              <p className="hero-avatar-title">Full-Stack · AI/ML</p>
+              <p className="hero-avatar-title">AI/ML · Full-Stack</p>
               <div className="hero-avatar-status">
                 <span className="status-dot animate-pulse"></span>
                 <span className="status-text">Open for work</span>

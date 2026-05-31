@@ -1,12 +1,12 @@
 # 🌟 Võ Thị Thương - Personal Portfolio
 
-A sleek, responsive, and modern developer portfolio showcasing my work as a **Full-Stack Engineer & AI/ML Developer**. Built using **React + Vite** with modular components and optimized CSS styling.
+A sleek, responsive, and modern developer portfolio showcasing my work as an **AI/ML & Full-Stack Engineer**. Built using **React + Vite** with modular components and optimized CSS styling.
 
 ---
 
 ## 🚀 About Me
 
-I am a Full-Stack Engineer based in Ho Chi Minh City, Vietnam 🇻🇳. I focus on building scalable systems from backend to browser, combining robust software engineering principles with data-driven AI/ML solutions.
+I am an AI/ML & Full-Stack Engineer based in Ho Chi Minh City, Vietnam 🇻🇳. I focus on building scalable systems from backend to browser, combining robust software engineering principles with data-driven AI/ML solutions.
 
 * **Goal:** Clean code. Real impact.
 * **Focus Areas:** Web Applications (Spring Boot, React, PHP) and Machine Learning (Deep Learning, Bioinformatics, Data Analysis).
