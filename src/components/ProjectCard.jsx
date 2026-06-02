@@ -16,6 +16,13 @@ export function ProjectCard({ project, index, t }) {
   const desc = project.descKey ? t(project.descKey) : project.desc;
   const highlight = project.highlightKey ? t(project.highlightKey) : project.highlight;
 
+  const getImageUrl = (url) => {
+    if (!url) return "";
+    if (url.startsWith("http") || url.startsWith("data:")) return url;
+    const cleanUrl = url.startsWith("/") ? url.slice(1) : url;
+    return `${import.meta.env.BASE_URL || "/"}${cleanUrl}`;
+  };
+
   return (
     <div
       ref={ref}
@@ -26,7 +33,7 @@ export function ProjectCard({ project, index, t }) {
       {/* Project Mockup Image Wrapper */}
       <div className="project-card-image-wrapper">
         <img
-          src={project.image}
+          src={getImageUrl(project.image)}
           alt={project.title}
           className="project-card-image"
           onError={(e) => {

@@ -72,7 +72,7 @@ export const PROJECTS = [
     github: "https://github.com/VThuongg/Mobile-Phone-Store",
     demo: "#",
     category: "web",
-    image: "/images/projects/store.png"
+    image: "/avt_prj_phone.png"
   },
   {
     title: "Secure Email Encryption",
@@ -82,9 +82,9 @@ export const PROJECTS = [
     tags: ["Python", "PyCryptodome", "Tkinter"],
     highlightKey: "emailHighlight",
     github: "https://github.com/VThuongg/Secure-Email-Encryption",
-    demo: "#",
+    demo: "https://secure-email-encryption.onrender.com/",
     category: "web",
-    image: "/images/projects/email.png"
+    image: "/avt_prj_email.png"
   },
 ];
 
