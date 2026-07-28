@@ -27,7 +27,7 @@ export function Experience({ t }) {
       company: "MindX Technology School",
       shortName: "MindX School",
       roleKey: "expMindXRole",
-      period: "Aug 2025 – May 2026",
+      period: "Aug 2025 – Present",
       typeTextKey: "expTypeWork",
       points: [
         "expMindXPoint1",
