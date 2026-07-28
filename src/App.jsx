@@ -3,6 +3,7 @@ import { useInView } from "./hooks/useInView";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
+import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
@@ -23,9 +24,7 @@ export default function Portfolio() {
     return localStorage.getItem("theme") || "dark"; // Default to dark mode for premium look
   });
 
-  const [language, setLanguage] = useState(() => {
-    return localStorage.getItem("language") || "vi";
-  });
+  const language = "en";
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -33,11 +32,8 @@ export default function Portfolio() {
   }, [theme]);
 
   useEffect(() => {
-    localStorage.setItem("language", language);
-    document.title = language === "vi"
-      ? "Võ Thị Thương | AI/ML & Kỹ sư Full-Stack"
-      : "Vo Thi Thuong | AI/ML & Full-Stack Engineer";
-  }, [language]);
+    document.title = "Vo Thi Thuong | Software Developer & QA Tester";
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,18 +46,42 @@ export default function Portfolio() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "vi" ? "en" : "vi"));
-  };
-
   const t = (key) => {
     return TRANSLATIONS[language][key] || key;
   };
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      // 1. Set scrolled class for navbar styling
+      setScrolled(window.scrollY > 40);
+
+      // 2. Scroll Spy: automatically update active section on scroll
+      const sections = ["home", "about", "experience", "skills", "projects", "contact"];
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            const mapping = {
+              home: "Home",
+              about: "About",
+              experience: "Experience",
+              skills: "Skills",
+              projects: "Projects",
+              contact: "Contact"
+            };
+            setActive(mapping[sectionId]);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollTo = (id) => {
@@ -98,8 +118,6 @@ export default function Portfolio() {
         scrollTo={scrollTo}
         theme={theme}
         toggleTheme={toggleTheme}
-        language={language}
-        toggleLanguage={toggleLanguage}
         t={t}
       />
 
@@ -107,7 +125,10 @@ export default function Portfolio() {
       <Hero heroRef={heroRef} heroInView={heroInView} scrollTo={scrollTo} t={t} />
 
       {/* About */}
-      <About aboutRef={aboutRef} aboutInView={aboutInView} language={language} t={t} />
+      <About aboutRef={aboutRef} aboutInView={aboutInView} t={t} />
+
+      {/* Experience */}
+      <Experience t={t} />
 
       {/* Skills */}
       <Skills skillsRef={skillsRef} skillsInView={skillsInView} t={t} />

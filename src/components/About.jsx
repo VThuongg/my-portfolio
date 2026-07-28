@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TIMELINE } from "../constants/portfolioData";
 
-export function About({ aboutRef, aboutInView, language, t }) {
+export function About({ aboutRef, aboutInView, t }) {
   const [activeFile, setActiveFile] = useState("Bio.json");
   const [runStatus, setRunStatus] = useState("idle"); // idle, running, success
   const [consoleLogs, setConsoleLogs] = useState([]);
@@ -9,7 +9,7 @@ export function About({ aboutRef, aboutInView, language, t }) {
   const fileContents = {
     "Bio.json": `{
   "name": "${t("ownerName")}",
-  "role": "AI/ML & Full-Stack",
+  "role": "Software Developer & QA Tester",
   "location": "Ho Chi Minh City 🇻🇳",
   "passion": "Building scalable software",
   "status": "Open for work 🚀"
@@ -193,7 +193,7 @@ that creates a real-world impact."`
             <h3 className="bento-tile-title">{t("journeyTitle")}</h3>
             <div className="about-timeline-list">
               {TIMELINE.map((item, index) => (
-                <div key={item.year} className="about-timeline-item">
+                <div key={item.titleKey} className="about-timeline-item">
                   <div className="about-timeline-dot-wrapper">
                     <div className="about-timeline-dot"></div>
                     {index !== TIMELINE.length - 1 && <div className="about-timeline-line"></div>}

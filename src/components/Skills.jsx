@@ -7,7 +7,7 @@ export function Skills({ skillsRef, skillsInView, t }) {
 
   const categories = [
     { id: "all", labelKey: "filterAll" },
-    { id: "ai", labelKey: "filterAI" },
+    { id: "qa", labelKey: "filterQA" },
     { id: "frontend", labelKey: "filterFrontend" },
     { id: "backend", labelKey: "filterBackend" },
     { id: "tools", labelKey: "filterTools" },

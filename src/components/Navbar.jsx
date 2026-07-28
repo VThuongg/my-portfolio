@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NAV_LINKS } from "../constants/portfolioData";
 
-export function Navbar({ active, scrolled, scrollTo, theme, toggleTheme, language, toggleLanguage, t }) {
+export function Navbar({ active, scrolled, scrollTo, theme, toggleTheme, t }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -26,31 +26,6 @@ export function Navbar({ active, scrolled, scrollTo, theme, toggleTheme, languag
 
         {/* Right side actions */}
         <div className="navbar-actions">
-          {/* Language Toggle Button */}
-          <button
-            onClick={toggleLanguage}
-            className="language-toggle-btn"
-            aria-label="Change language"
-            title={language === "vi" ? "Switch to English" : "Chuyển sang Tiếng Việt"}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lang-icon"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-              <path d="M2 12h20" />
-            </svg>
-            <span className="lang-text">{language.toUpperCase()}</span>
-          </button>
 
           {/* Theme Toggle Button */}
           <button

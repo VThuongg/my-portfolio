@@ -1,15 +1,15 @@
 # 🌟 Võ Thị Thương - Personal Portfolio
 
-A sleek, responsive, and modern developer portfolio showcasing my work as an **AI/ML & Full-Stack Engineer**. Built using **React + Vite** with modular components and optimized CSS styling.
+A sleek, responsive, and modern developer portfolio showcasing my work as a **Software Developer & QA Tester**. Built using **React + Vite** with modular components and optimized CSS styling.
 
 ---
 
 ## 🚀 About Me
 
-I am an AI/ML & Full-Stack Engineer based in Ho Chi Minh City, Vietnam 🇻🇳. I focus on building scalable systems from backend to browser, combining robust software engineering principles with data-driven AI/ML solutions.
+I am a Software Developer & QA Tester based in Ho Chi Minh City, Vietnam 🇻🇳. I focus on building scalable systems from backend to browser, combining robust software engineering principles with structured QA testing solutions.
 
 * **Goal:** Clean code. Real impact.
-* **Focus Areas:** Web Applications (Spring Boot, React, PHP) and Machine Learning (Deep Learning, Bioinformatics, Data Analysis).
+* **Focus Areas:** Web Applications (Spring Boot, React, PHP), Game Development (Internship), and Quality Assurance (Manual & Automated Testing).
 
 ---
 
@@ -20,8 +20,8 @@ I am an AI/ML & Full-Stack Engineer based in Ho Chi Minh City, Vietnam 🇻🇳.
 | **Backend** | Spring Boot, Java / Kotlin, PHP, JPA / Hibernate, Python |
 | **Frontend** | React, Modern JavaScript, CSS3 (Flexbox/Grid), Responsive Design |
 | **Databases** | MySQL, PostgreSQL |
-| **AI / ML / Data Science** | PyTorch, HuggingFace, XGBoost, Scikit-learn, Pandas, Matplotlib, Seaborn |
-| **Testing & QA** | JUnit, Manual Testing |
+| **Data & Scripting** | Python, Pandas, Matplotlib, Seaborn, SQL |
+| **Testing & QA** | JUnit, Postman, Manual Testing, API Verification |
 
 ---
 
@@ -56,18 +56,18 @@ src/
 
 ## 🌟 Featured Projects
 
-### 1. ProtGO (Deep Learning · Protein Function Prediction)
-* **Description:** A multi-expert deep learning system for automated protein function labeling using Gene Ontology terms. Achieved an Fmax of 0.747, surpassing NetGO2 by +7% using only ~4% of their parameters.
-* **Stack:** Python, PyTorch, HuggingFace, XGBoost, Scikit-learn.
-* **Highlight:** Fmax 0.747 · AuPRC 0.785
-
-### 2. Mobile Phone Store (Full-Stack Management System)
+### 1. Mobile Phone Store (Full-Stack Management System)
 * **Description:** Full-stack web application for managing products, customers, employees, and orders. Features role-based access control and comprehensive QA testing.
 * **Stack:** PHP, MySQL, JavaScript, JUnit, Manual Testing.
 * **Highlight:** Role-Based Access Control
 
-### 3. MovieLens Analysis (Data Science)
-* **Description:** Data-driven analysis of audience ratings using MovieLens & TMDB. Identified "Director Power" as the dominant feature—being 2.5× more influential than the lead actor.
+### 2. ProtGO (Data Pipeline & Classification Model)
+* **Description:** A multi-expert data processing pipeline and model evaluation system for automated protein function classification. Optimized network efficiency to reduce parameters by 96%.
+* **Stack:** Python, PyTorch, HuggingFace, XGBoost, Scikit-learn.
+* **Highlight:** Fmax 0.747 · AuPRC 0.785
+
+### 3. MovieLens Analysis (Data Analysis)
+* **Description:** Data-driven analysis and pipeline engineering of movie ratings using MovieLens & TMDB. Developed statistical modeling and feature analysis pipelines using Python.
 * **Stack:** Python, Pandas, XGBoost, Matplotlib, Seaborn.
 * **Highlight:** Director Power 2.5× > Actor
 
