@@ -31,7 +31,7 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
           <div className="hero-stats">
             {[
               [t("statProjectsVal"), t("statProjectsLabel")],
-              [t("statExpVal"), t("statExpLabel")],
+              [t("statEduVal"), t("statEduLabel")],
               [t("statLocVal"), t("statLocLabel")],
             ].map(([num, label]) => (
               <div key={label} className="hero-stat-item">
@@ -49,7 +49,7 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
             <div className="hero-avatar-content">
               <div className="hero-avatar-emoji">👩‍💻</div>
               <p className="hero-avatar-name">{t("ownerName")}</p>
-              <p className="hero-avatar-title">Software Dev · Game & QA</p>
+              <p className="hero-avatar-title">{t("heroAvatarTitle")}</p>
               <div className="hero-avatar-status">
                 <span className="status-dot animate-pulse"></span>
                 <span className="status-text">Open for work</span>

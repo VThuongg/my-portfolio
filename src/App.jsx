@@ -32,7 +32,7 @@ export default function Portfolio() {
   }, [theme]);
 
   useEffect(() => {
-    document.title = "Vo Thi Thuong | Software Developer & QA Tester";
+    document.title = "Vo Thi Thuong | Portfolio";
   }, []);
 
   useEffect(() => {
