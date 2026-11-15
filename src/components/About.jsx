@@ -11,19 +11,20 @@ export function About({ aboutRef, aboutInView, t }) {
   "name": "${t("ownerName")}",
   "role": "${t("bioRole")}",
   "location": "Ho Chi Minh City 🇻🇳",
-  "passion": "Building scalable software",
+  "passion": "Software Quality Assurance & Testing",
   "status": "Open for work 🚀"
 }`,
-    "Stack.js": `const developer = {
-  languages: ["Python", "JavaScript", "SQL", "HTML/CSS"],
-  frameworks: ["React", "Next.js", "FastAPI"],
-  databases: ["Supabase", "PostgreSQL", "MySQL"],
-  tools: ["GitHub", "Postman", "Git"]
+    "Stack.js": `const qaEngineer = {
+  testing: ["Manual Testing", "Automation Testing", "API Testing (Postman)", "Regression", "Functional & UI"],
+  databases: ["PostgreSQL", "MySQL", "SQL"],
+  tools: ["Postman", "Git", "GitHub Actions", "Figma"],
+  languages: ["Python", "Java", "TypeScript", "JavaScript"]
 };`,
-    "Philosophy.txt": `"Code is read more than written.
-I strive for clean architecture,
-readability, and building tech
-that creates a real-world impact."`
+    "Philosophy.txt": `"Quality is never an accident.
+I focus on edge cases,
+meticulous test case design, and
+preventing defects early to deliver
+reliable, user-focused products."`
   };
 
   const handleMouseMove = (e) => {
@@ -42,9 +43,9 @@ that creates a real-world impact."`
     // Simulate terminal compiling & execution
     const steps = [
       { text: "$ node Stack.js", delay: 100 },
-      { text: "⏳ Compiling code modules...", delay: 400 },
-      { text: "✓ Stack verified and active.", delay: 800 },
-      { text: `🚀 Output: ${t("ownerName")} is ready to scale your next product! ✨`, delay: 1300 }
+      { text: "⏳ Running test suites & verifying QA stack...", delay: 400 },
+      { text: "✓ QA & Test suites passed. 0 defects found.", delay: 800 },
+      { text: `🚀 Output: ${t("ownerName")} is ready to deliver quality software! ✨`, delay: 1300 }
     ];
 
     steps.forEach((step) => {
@@ -79,12 +80,12 @@ that creates a real-world impact."`
             
             <div className="about-tags">
               {[
+                ["Manual Testing", "#06b6d4"],
+                ["Automation", "#10b981"],
+                ["Postman & API", "#FF6C37"],
+                ["Bug Life Cycle", "#ec4899"],
                 ["Python", "#ca8a04"],
-                ["Spring Boot", "#16a34a"],
-                ["React", "#06b6d4"],
-                ["JavaScript", "#f7df1e"],
-                ["PHP", "#4f46e5"],
-                ["SQL Server", "#CC292B"]
+                ["SQL / Database", "#0284c7"]
               ].map(([tag, color]) => (
                 <span
                   key={tag}
@@ -212,4 +213,3 @@ that creates a real-world impact."`
     </section>
   );
 }
-

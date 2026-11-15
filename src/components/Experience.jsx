@@ -8,18 +8,36 @@ export function Experience({ t }) {
 
   const experiences = [
     {
+      id: "fukudaai",
+      company: "FukudaAI",
+      shortName: "FukudaAI",
+      roleKey: "expFukudaAIRole",
+      period: "Oct 2026 – Present",
+      typeTextKey: "expTypeWork",
+      points: [
+        "expFukudaAIPoint1",
+        "expFukudaAIPoint2",
+        "expFukudaAIPoint3",
+        "expFukudaAIPoint4"
+      ],
+      tags: ["Automation Testing", "Manual Testing", "Mechanical Software", "Python", "API Testing"],
+      color: "#10b981"
+    },
+    {
       id: "asol",
-      company: "ASOL (Alpaca Solutions)",
-      shortName: "ASOL Studio",
+      company: "Alpaca Solutions",
+      shortName: "Alpaca Solutions",
       roleKey: "expASOLRole",
       period: "Mar 2026 – Jun 2026",
       typeTextKey: "expTypeIntern",
       points: [
         "expASOLPoint1",
         "expASOLPoint2",
-        "expASOLPoint3"
+        "expASOLPoint3",
+        "expASOLPoint4",
+        "expASOLPoint5"
       ],
-      tags: ["Game Dev", "Engine Architecture", "Casual Games"],
+      tags: ["Manual Testing", "Android Apps", "API Testing", "Postman", "Bug Reporting"],
       color: "#06b6d4"
     },
     {
@@ -34,8 +52,8 @@ export function Experience({ t }) {
         "expMindXPoint2",
         "expMindXPoint3"
       ],
-      tags: ["Scratch", "GameMaker", "Python", "HTML/CSS/JS"],
-      color: "#10b981"
+      tags: ["Python", "Scratch", "GameMaker", "HTML/CSS/JS"],
+      color: "#f59e0b"
     }
   ];
 

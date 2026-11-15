@@ -58,10 +58,10 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
 
             {/* Floating Tech Icons */}
             <div className="floating-tech tech-react" style={{ "--float-delay": "0s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman" />
             </div>
             <div className="floating-tech tech-spring" style={{ "--float-delay": "1.5s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" />
             </div>
             <div className="floating-tech tech-python" style={{ "--float-delay": "3s" }}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
@@ -75,4 +75,3 @@ export function Hero({ heroRef, heroInView, scrollTo, t }) {
     </section>
   );
 }
-

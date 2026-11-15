@@ -3,57 +3,57 @@
 
 ## 👋 Hi, I'm Thương
 
-### Software Developer · Game Dev & QA Tester
+### QA/QC Tester · Software Quality Assurance
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&lines=Building+scalable+systems+from+backend+to+browser;Spring+Boot+%7C+FastAPI+%7C+React+%7C+Next.js;Game+Development+%7C+QA+Testing;Turning+code+into+quality+products)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&lines=QA%2FQC+Tester+%7C+Manual+%26+Automation+Testing;API+Testing+with+Postman+%7C+SQL+%7C+Python;Software+Tester+%40+FukudaAI;Ensuring+quality%2C+precision+%26+reliability)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-I'm a Software Developer and QA Tester based in Ho Chi Minh City, specializing in React, Next.js, Spring Boot, and FastAPI. I care about clean architecture, system design, and software quality.
+I'm a QA/QC Tester based in Ho Chi Minh City with hands-on experience in manual and automated software testing. I specialize in requirement analysis, test case design, functional, UI, exploratory, regression, and API testing using Postman and SQL.
 
-From designing reusable game engines to building web platforms with complex relational databases and end-to-end testing pipelines - I thrive at delivering high-quality, scalable digital solutions.
+Currently working as a Software Tester at **FukudaAI** (automated and manual testing for mechanical engineering software) and a Programming Teaching Assistant at **MindX Technology School**. Previously completed a 4-month QA Internship at **Alpaca Solutions** testing Android applications.
 
 ---
 
 ## 🧬 About Me
 
 ```python
-class Developer:
+class QATester:
     name        = "Võ Thị Thương"
-    role        = "Software Developer & QA Tester"
+    role        = "QA/QC Tester"
+    education   = "Saigon University (B.E. in IT, GPA 3.60/4.0)"
     location    = "Ho Chi Minh City, Vietnam 🇻🇳"
-    stack       = ["React", "FastAPI", "Spring Boot", "MySQL", "Supabase"]
-    interests   = ["Full-Stack Dev", "Game Dev", "Software Quality Assurance"]
-    currently   = "Building a Food Ordering Platform with FastAPI & Supabase"
-    goal        = "Write clean code. Ship with quality. Learn always."
+    focus       = ["Manual Testing", "Automation Testing", "API Testing", "Test Case Design"]
+    tools       = ["Postman", "Git", "GitHub Actions", "SQL", "Python", "Figma"]
+    currently   = "Software Tester at FukudaAI & Teaching Assistant at MindX"
+    goal        = "Prevent defects early. Ensure seamless UX. Deliver high quality."
 ```
 
 ---
 
-## ⚡ Tech Stack
+## ⚡ Tech & QA Stack
 
-### 🔧 Backend & Systems
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![JPA/Hibernate](https://img.shields.io/badge/JPA%2FHibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-### 🧠 AI / ML & Data Science
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-### 🗄️ Database, Frontend & QA
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![JUnit](https://img.shields.io/badge/JUnit-C21325?style=for-the-badge&logo=junit5&logoColor=white)
+### 🔍 Testing & Quality Assurance
+![Manual Testing](https://img.shields.io/badge/Manual_Testing-06B6D4?style=for-the-badge&logoColor=white)
+![Automation Testing](https://img.shields.io/badge/Automation_Testing-10B981?style=for-the-badge&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![API Testing](https://img.shields.io/badge/REST_API-6DB33F?style=for-the-badge&logo=openapi&logoColor=white)
+![Regression Testing](https://img.shields.io/badge/Regression_Testing-F59E0B?style=for-the-badge&logoColor=white)
+
+### 💻 Programming & Tools
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+### 🗄️ Database
+![SQL](https://img.shields.io/badge/SQL-0284C7?style=for-the-badge&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ---
  
