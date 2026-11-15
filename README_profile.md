@@ -5,7 +5,7 @@
 
 ### QA/QC Tester · Software Quality Assurance
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&lines=QA%2FQC+Tester+%7C+Manual+%26+Automation+Testing;API+Testing+with+Postman+%7C+SQL+%7C+Python;Software+Tester+%40+FukudaAI;Ensuring+quality%2C+precision+%26+reliability)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&lines=QA%2FQC+Tester+%7C+Manual+%26+Automation+Testing;API+Testing+with+Postman+%7C+SQL+%7C+Python;Software+Tester+%40+Fukuda.AI;Ensuring+quality%2C+precision+%26+reliability)](https://git.io/typing-svg)
 
 </div>
 
@@ -13,7 +13,7 @@
 
 I'm a QA/QC Tester based in Ho Chi Minh City with hands-on experience in manual and automated software testing. I specialize in requirement analysis, test case design, functional, UI, exploratory, regression, and API testing using Postman and SQL.
 
-Currently working as a Software Tester at **FukudaAI** (automated and manual testing for mechanical engineering software) and a Programming Teaching Assistant at **MindX Technology School**. Previously completed a 4-month QA Internship at **Alpaca Solutions** testing Android applications.
+Currently working as a Software Tester at **Fukuda.AI** (testing quotation and ERP systems, 3D models, 2D drawing extraction, and AI features) and a Programming Teaching Assistant at **MindX Technology School**. Previously completed a 4-month QA Internship at **Alpaca Solutions** testing Android applications.
 
 ---
 
@@ -27,7 +27,7 @@ class QATester:
     location    = "Ho Chi Minh City, Vietnam 🇻🇳"
     focus       = ["Manual Testing", "Automation Testing", "API Testing", "Test Case Design"]
     tools       = ["Postman", "Git", "GitHub Actions", "SQL", "Python", "Figma"]
-    currently   = "Software Tester at FukudaAI & Teaching Assistant at MindX"
+    currently   = "Software Tester at Fukuda.AI & Teaching Assistant at MindX"
     goal        = "Prevent defects early. Ensure seamless UX. Deliver high quality."
 ```
 

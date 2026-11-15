@@ -1,351 +1,188 @@
 export const NAV_LINKS = [
-  { id: "Home", labelKey: "navHome" },
-  { id: "About", labelKey: "navAbout" },
-  { id: "Experience", labelKey: "navExperience" },
-  { id: "Skills", labelKey: "navSkills" },
-  { id: "Projects", labelKey: "navProjects" },
-  { id: "Contact", labelKey: "navContact" }
+  { id: "hero", label: "01. PORTFOLIO" },
+  { id: "about", label: "02. ABOUT" },
+  { id: "experience", label: "03. EXPERIENCE" },
+  { id: "education", label: "04. EDUCATION" },
+  { id: "skills", label: "05. SKILLS" },
+  { id: "projects", label: "06. PROJECTS" },
+  { id: "volunteer", label: "07. VOLUNTEER" },
+  { id: "info", label: "08. LANGUAGES" },
+  { id: "contact", label: "09. CONTACT" }
 ];
 
-export const SKILLS = [
-  // TESTING & QA
-  { name: "Manual Testing", icon: "🔍", level: 92, category: "qa", color: "#06b6d4" },
-  { name: "Automation Testing", icon: "⚡", level: 82, category: "qa", color: "#10b981" },
-  { name: "API Testing", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg", level: 88, category: "qa", color: "#FF6C37" },
-  { name: "Test Case Design", icon: "📋", level: 92, category: "qa", color: "#8b5cf6" },
-  { name: "Bug Life Cycle", icon: "🐛", level: 90, category: "qa", color: "#ec4899" },
-  { name: "Regression Testing", icon: "🔄", level: 88, category: "qa", color: "#f59e0b" },
-  { name: "SDLC & STLC", icon: "📊", level: 88, category: "qa", color: "#14b8a6" },
-  { name: "Agile / Scrum", icon: "🏃", level: 86, category: "qa", color: "#6366f1" },
-
-  // API & DATABASE
-  { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg", level: 88, category: ["qa", "tools"], color: "#FF6C37" },
-  { name: "REST API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg", level: 88, category: "backend", color: "#6BA539" },
-  { name: "JSON", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg", level: 90, category: "backend", color: "#eab308" },
-  { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg", level: 86, category: "backend", color: "#0284c7" },
-  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg", level: 80, category: "backend", color: "#334155" },
-  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg", level: 85, category: "backend", color: "#00758F" },
-
-  // PROGRAMMING LANGUAGES
-  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", level: 85, category: "backend", color: "#ca8a04" },
-  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg", level: 82, category: "backend", color: "#e11d48" },
-  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg", level: 85, category: "frontend", color: "#f7df1e" },
-  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", level: 78, category: "frontend", color: "#3178c6" },
-  { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg", level: 80, category: "backend", color: "#4f46e5" },
-
-  // TOOLS & COLLABORATION
-  { name: "Git & GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", level: 88, category: "tools", color: "#181717" },
-  { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg", level: 82, category: "tools", color: "#2088FF" },
-  { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg", level: 78, category: "tools", color: "#F24E1E" },
-  { name: "ChatGPT & Claude", icon: "🤖", level: 90, category: "tools", color: "#10a37f" },
-  { name: "Excel & Sheets", icon: "📊", level: 85, category: "tools", color: "#16a34a" }
-];
-
-export const PROJECTS = [
-  {
-    title: "E-commerce Management System",
-    subtitle: "Manual & API Testing · Management System",
-    periodKey: "storePeriod",
-    descKey: "storeDesc",
-    tags: ["PHP", "MySQL", "JavaScript", "Manual Testing", "API Testing", "Postman"],
-    highlightKey: "storeHighlight",
-    github: "https://github.com/VThuongg/Mobile-Phone-Store",
-    demo: "#",
-    category: "web",
-    image: "/avt_prj_phone.png"
-  },
-  {
-    title: "Secure Email Encryption",
-    subtitle: "Hybrid Cryptography · Web App",
-    periodKey: "emailPeriod",
-    descKey: "emailDesc",
-    tags: ["Flask", "Python", "PyCryptodome", "Security Testing"],
-    highlightKey: "emailHighlight",
-    github: "https://github.com/VThuongg/Secure-Email-Encryption",
-    demo: "https://secure-email-encryption.onrender.com/",
-    category: "web",
-    image: "/avt_prj_email.png"
-  },
-  {
-    title: "ProtGO",
-    subtitle: "Data Pipeline · Classification Model",
-    periodKey: "protgoPeriod",
-    descKey: "protgoDesc",
-    tags: ["Python", "PyTorch", "HuggingFace", "XGBoost", "Scikit-learn"],
-    highlight: "Fmax 0.747 · AuPRC 0.785",
-    github: "https://github.com/VThuongg/protgo",
-    demo: null,
-    category: "ai",
-    image: "/protGO.png"
-  },
-  {
-    title: "MovieLens Analysis",
-    subtitle: "Data Science · Audience Satisfaction",
-    periodKey: "movielensPeriod",
-    descKey: "movielensDesc",
-    tags: ["Python", "Pandas", "XGBoost", "Matplotlib", "Seaborn"],
-    highlightKey: "movielensHighlight",
-    github: "https://github.com/VThuongg/Movie-Audience-Satisfaction-Analysis",
-    demo: null,
-    category: "ai",
-    image: "/images/projects/movielens.png"
-  },
-];
-
-export const TIMELINE = [
-  {
-    year: "2026",
-    titleKey: "timeline2026Title",
-    descKey: "timeline2026Desc"
-  },
-  {
-    year: "2025",
-    titleKey: "timeline2025Title",
-    descKey: "timeline2025Desc"
-  },
-  {
-    year: "2024",
-    titleKey: "timeline2024Title",
-    descKey: "timeline2024Desc"
-  },
-  {
-    year: "2022",
-    titleKey: "timeline2022Title",
-    descKey: "timeline2022Desc"
-  }
-];
-
-export const TRANSLATIONS = {
-  en: {
-    logoText: "VThuongg",
-    navHome: "Home",
-    navAbout: "About",
-    navExperience: "Experience",
-    navSkills: "Skills",
-    navProjects: "Projects",
-    navContact: "Contact",
-    hireMe: "Hire Me",
-    heroSubtitle: "WELCOME TO MY PORTFOLIO",
-    heroAvatarTitle: "QA/QC Tester",
-    bioRole: "QA/QC Tester",
-    heroTitlePrefix: "Hi, I'm",
-    heroDesc: "QA/QC Tester with hands-on experience in manual and automated software testing. Experienced in requirement analysis, test case design, validating user flows, API testing, and defect reporting.",
-    viewProjects: "View Projects →",
-    downloadCV: "↓ Download CV",
-    statProjectsVal: "3+",
-    statProjectsLabel: "Projects",
-    statEduVal: "SGU",
-    statEduLabel: "GPA 3.60 / 4.0",
-    statLocVal: "HCM City",
-    statLocLabel: "Vietnam 🇻🇳",
-    aboutLabel: "ABOUT ME",
-    aboutTitle1: "Test with precision,",
-    aboutTitle2: "deliver with quality.",
-    aboutDesc1: "I major in Information Technology at Saigon University (SGU, GPA 3.60 / 4.0), specialized as a QA/QC Tester. With a solid foundation in software quality assurance, I have extensive experience in requirement analysis, test case design, functional, UI, exploratory, regression, and API testing using Postman and SQL.",
-    aboutDesc2: "Currently, I am working at FukudaAI as a Software Tester (conducting both automated and manual testing for mechanical engineering software) and serving as a Programming Teaching Assistant at MindX. Previously, I completed a 4-month QA Internship at Alpaca Solutions testing Android mobile applications.",
-    tabStory: "My Story",
-    tabValues: "My Values",
-    valuesTitle: "Core Values & Principles",
-    value1Title: "Quality & Precision",
-    value1Desc: "Quality is not an accident; it is the result of intelligent effort. I focus on edge cases, meticulous test case design, and finding defects early.",
-    value2Title: "Continuous Learning & Automation",
-    value2Desc: "Continuously advancing testing methodologies, expanding test automation skills, and applying AI tools (ChatGPT, Claude) to elevate QA efficiency.",
-    value3Title: "Analytical & User-Centric Mindset",
-    value3Desc: "Bridging the gap between software development logic and real-world user workflows to guarantee reliability and seamless UX.",
-    journeyTitle: "My Journey",
-    skillsLabel: "WHAT I DO BEST",
-    skillsTitle: "My Skills",
-    skillsDesc: "A comprehensive overview of my technical skills and software quality assurance expertise",
-    filterAll: "All",
-    filterFrontend: "Frontend",
-    filterBackend: "API & DB",
-    filterQA: "Testing & QA",
-    filterTools: "Tools",
-    projectsLabel: "MY WORK",
-    projectsTitle: "Featured Projects",
-    projectsDesc: "A selection of projects highlighting my software quality assurance and testing capabilities",
-    projFilterAll: "All Projects",
-    projFilterAI: "Research & AI",
-    projFilterWeb: "Web Apps",
-    badgeAI: "Research",
-    badgeWeb: "Web App",
-    contactLabel: "GET IN TOUCH",
-    contactTitle: "Let's work together",
-    contactDesc: "Open to full-time QA/QC opportunities, freelance projects, or exchanging software testing insights.",
-    contactCopyEmail: "Copy Email",
-    contactCopied: "Copied!",
-    contactNamePlaceholder: "Your Name",
-    contactEmailPlaceholder: "Your Email",
-    contactMessagePlaceholder: "Your Message",
-    contactSendBtn: "Send Message",
-    contactSendingBtn: "Sending...",
-    contactSuccessMsg: "Thank you! Your message has been sent successfully.",
-    contactErrorMsg: "Oops! Something went wrong, please try again.",
-    footerText: "Designed & Built by Vo Thi Thuong",
-    ownerName: "Vo Thi Thuong",
-    
-    // Project Specific Translations
-    protgoPeriod: "Jan 2026 – May 2026",
-    protgoDesc: "Multi-expert data processing pipeline and model evaluation system for automated protein function classification. Optimized network efficiency to reduce parameters by 96%.",
-    storePeriod: "Jan 2025 – May 2025 · Team of 4",
-    storeDesc: "Reviewed software requirements and designed manual test cases for authentication, product management, order processing, and role-based access control (RBAC). Performed functional and API testing across key workflows and validated fixes through regression testing.",
-    storeHighlight: "Manual & API Testing · RBAC",
-    movielensPeriod: "2025 · Team of 3",
-    movielensDesc: "Data-driven analysis and pipeline engineering of movie ratings. Developed statistical modeling and feature analysis pipelines using Python.",
-    movielensHighlight: "Director Power 2.5× > Actor",
-    emailPeriod: "Sep 2024 – Dec 2024",
-    emailDesc: "Architected and developed a secure email application implementing hybrid cryptography (RSA-2048 + AES-256) to protect confidential communications and file attachments with end-to-end encryption.",
-    emailHighlight: "Hybrid Cryptography (RSA + AES)",
-
-    // Experience Section Translations
-    experienceLabel: "WORK & INTERNSHIPS",
-    experienceTitle: "Professional Experience",
-    experienceDesc: "A timeline of my work experience in software testing and quality assurance.",
-    expTypeIntern: "Internship",
-    expTypeWork: "Work",
-    expFukudaAIRole: "Software Tester",
-    expFukudaAIDesc: "Software Tester at FukudaAI (Oct 2026 – Present)",
-    expFukudaAIPoint1: "Conduct both automated and manual software testing for mechanical engineering software systems, validating complex calculation algorithms and design workflows.",
-    expFukudaAIPoint2: "Design comprehensive test plans, test scenarios, and detailed test cases for simulation features, user interfaces, and edge cases.",
-    expFukudaAIPoint3: "Build and execute automated test scripts using Python, verifying business logic, system workflows, and API endpoints.",
-    expFukudaAIPoint4: "Identify, log, and track defects across the Bug Life Cycle, collaborating closely with mechanical engineers and developers to ensure high reliability.",
-    expASOLRole: "QA Intern",
-    expASOLDesc: "4-month QA Internship at Alpaca Solutions (Mar 2026 – Jun 2026)",
-    expASOLPoint1: "Performed manual testing for Android mobile applications, validating features, UI interactions, user flows, and newly implemented changes against expected requirements.",
-    expASOLPoint2: "Designed and executed test cases for core features and edge cases, using functional, exploratory, and regression testing to verify product quality.",
-    expASOLPoint3: "Identified, reproduced, and documented defects with clear reproduction steps, expected results, actual results, severity, and supporting screenshots.",
-    expASOLPoint4: "Verified bug fixes through regression testing and collaborated with developers to clarify requirements, discuss issues, and ensure corrected functionality.",
-    expASOLPoint5: "Used ChatGPT and Claude to support requirement analysis, test scenario generation, test case preparation, and defect investigation.",
-    expMindXRole: "Programming Teaching Assistant",
-    expMindXDesc: "Teaching assistant at MindX Technology School (Aug 2025 – Present)",
-    expMindXPoint1: "Assisted in delivering programming courses (Scratch, GameMaker, Python, HTML/CSS/JS) to students.",
-    expMindXPoint2: "Guided students in understanding programming logic, building interactive applications, and debugging code.",
-    expMindXPoint3: "Facilitated practice sessions and mentored students in completing their final software and web projects.",
-
-    // Timeline Translations
-    timeline2026Title: "Software Tester at FukudaAI & QA Intern at Alpaca Solutions",
-    timeline2026Desc: "Working as Software Tester at FukudaAI (Auto & Manual testing for mechanical software) and completed a 4-month QA Internship at Alpaca Solutions testing mobile applications.",
-    timeline2025Title: "QA Testing & Teaching Assistant at MindX",
-    timeline2025Desc: "Conducted manual and API testing for E-commerce systems; joined MindX as a Programming Teaching Assistant.",
-    timeline2024Title: "Foundational IT & Software Engineering",
-    timeline2024Desc: "Deepened knowledge in databases, data structures, algorithms, and software testing principles.",
-    timeline2022Title: "Bachelor of Engineering in IT at Saigon University",
-    timeline2022Desc: "Started Bachelor of Engineering in Information Technology at Saigon University (SGU), achieving GPA 3.60 / 4.0."
-  },
-  vi: {
-    logoText: "Võ Thương",
-    navHome: "Trang chủ",
-    navAbout: "Giới thiệu",
-    navExperience: "Kinh nghiệm",
-    navSkills: "Kỹ năng",
-    navProjects: "Dự án",
-    navContact: "Liên hệ",
-    hireMe: "Liên hệ ngay",
-    heroSubtitle: "CHÀO MỪNG ĐẾN VỚI PORTFOLIO CỦA MÌNH",
-    heroAvatarTitle: "QA/QC Tester",
-    bioRole: "QA/QC Tester",
-    heroTitlePrefix: "Xin chào, mình là",
-    heroDesc: "QA/QC Tester với kinh nghiệm kiểm thử thủ công và tự động. Thành thạo phân tích yêu cầu, thiết kế test case, kiểm thử API, xác thực luồng người dùng và quản lý vòng đời lỗi.",
-    viewProjects: "Xem dự án →",
-    downloadCV: "↓ Tải CV",
-    statProjectsVal: "3+",
-    statProjectsLabel: "Dự án",
-    statEduVal: "SGU",
-    statEduLabel: "GPA 3.60 / 4.0",
-    statLocVal: "TP. Hồ Chí Minh",
-    statLocLabel: "Việt Nam 🇻🇳",
-    aboutLabel: "GIỚI THIỆU",
-    aboutTitle1: "Kiểm thử chuẩn xác,",
-    aboutTitle2: "sản phẩm chất lượng.",
-    aboutDesc1: "Mình theo học ngành Công nghệ Thông tin tại Trường Đại học Sài Gòn (SGU, GPA 3.60 / 4.0), định hướng chuyên nghiệp với vai trò QA/QC Tester. Nắm vững nền tảng kiểm thử phần mềm, mình có kinh nghiệm phân tích yêu cầu, thiết kế test case, kiểm thử chức năng, giao diện, hồi quy và kiểm thử API với Postman và SQL.",
-    aboutDesc2: "Hiện tại, mình đang làm việc tại FukudaAI với vai trò Software Tester (thực hiện cả kiểm thử tự động và thủ công cho các phần mềm kỹ thuật cơ khí), đồng thời là Trợ giảng Lập trình tại MindX. Trước đó, mình đã hoàn thành kỳ thực tập QA 4 tháng tại Alpaca Solutions chuyên về kiểm thử ứng dụng di động Android.",
-    tabStory: "Câu chuyện",
-    tabValues: "Giá trị cốt lõi",
-    valuesTitle: "Giá trị cốt lõi & Nguyên tắc",
-    value1Title: "Chất lượng & Độ chính xác",
-    value1Desc: "Chất lượng là ưu tiên hàng đầu. Mình chú trọng bao quát các trường hợp biên, thiết kế test case tỉ mỉ và phát hiện lỗi sớm trước khi lên môi trường thực tế.",
-    value2Title: "Học hỏi không ngừng & Mở rộng Automation",
-    value2Desc: "Không ngừng nâng cao nghiệp vụ kiểm thử, mở rộng sang kiểm thử tự động và khai thác các công cụ AI (ChatGPT, Claude) để tối ưu hiệu suất công việc.",
-    value3Title: "Tư duy phân tích & Hướng tới người dùng",
-    value3Desc: "Tiếp cận phần mềm từ góc nhìn của lập trình viên lẫn người dùng cuối để đảm bảo tính ổn định, tin cậy và trải nghiệm mượt mà.",
-    journeyTitle: "Hành trình sự nghiệp",
-    skillsLabel: "THẾ MẠNH CỦA MÌNH",
-    skillsTitle: "Kỹ năng của mình",
-    skillsDesc: "Tổng quan toàn diện về kỹ năng chuyên môn trong lĩnh vực đảm bảo chất lượng phần mềm (QA/QC)",
-    filterAll: "Tất cả",
-    filterFrontend: "Frontend",
-    filterBackend: "API & DB",
-    filterQA: "Kiểm thử & QA",
-    filterTools: "Công cụ",
-    projectsLabel: "SẢN PHẨM",
-    projectsTitle: "Dự án tiêu biểu",
-    projectsDesc: "Một số dự án tiêu biểu thể hiện năng lực kiểm thử phần mềm và tư duy công nghệ",
-    projFilterAll: "Tất cả dự án",
-    projFilterAI: "Nghiên cứu & AI",
-    projFilterWeb: "Web Apps",
-    badgeAI: "Nghiên cứu",
-    badgeWeb: "Web App",
-    contactLabel: "KẾT NỐI",
-    contactTitle: "Cùng làm việc nhé",
-    contactDesc: "Sẵn sàng đón nhận cơ hội làm việc QA/QC, dự án freelance hoặc đơn giản là một buổi trao đổi về kiểm thử phần mềm.",
-    contactCopyEmail: "Sao chép Email",
-    contactCopied: "Đã sao chép!",
-    contactNamePlaceholder: "Tên của bạn",
-    contactEmailPlaceholder: "Email của bạn",
-    contactMessagePlaceholder: "Lời nhắn của bạn",
-    contactSendBtn: "Gửi tin nhắn",
-    contactSendingBtn: "Đang gửi...",
-    contactSuccessMsg: "Cảm ơn bạn! Lời nhắn của bạn đã được gửi đi thành công.",
-    contactErrorMsg: "Ối! Đã có lỗi xảy ra, vui lòng thử lại.",
-    footerText: "Thiết kế & Lập trình bởi Võ Thị Thương",
-    ownerName: "Võ Thị Thương",
-
-    // Project Specific Translations
-    protgoPeriod: "Tháng 1/2026 – Tháng 5/2026",
-    protgoDesc: "Hệ thống đường ống xử lý dữ liệu và đánh giá mô hình để phân loại tự động chức năng protein. Tối ưu hóa hiệu năng giúp giảm 96% kích thước tham số.",
-    storePeriod: "Tháng 1/2025 – Tháng 5/2025 · Nhóm 4 người",
-    storeDesc: "Phân tích yêu cầu phần mềm và thiết kế test case thủ công cho các phân hệ xác thực, quản lý sản phẩm, xử lý đơn hàng, khách hàng và phân quyền RBAC. Thực hiện kiểm thử chức năng và kiểm thử API cho các luồng nghiệp vụ chính, đồng thời thực thi kiểm thử hồi quy để xác nhận sửa lỗi.",
-    storeHighlight: "Kiểm thử Manual & API · Phân quyền RBAC",
-    movielensPeriod: "2025 · Nhóm 3 người",
-    movielensDesc: "Phân tích dữ liệu và kỹ nghệ đường ống dữ liệu xếp hạng phim. Xây dựng các mô hình thống kê và phân tích thuộc tính sử dụng Python.",
-    movielensHighlight: "Ảnh hưởng của Đạo diễn > 2.5x Diễn viên",
-    emailPeriod: "Tháng 9/2024 – Tháng 12/2024",
-    emailDesc: "Thiết kế và phát triển ứng dụng email bảo mật tích hợp mã hóa lai (RSA-2048 + AES-256) nhằm bảo vệ thông tin liên lạc và tệp đính kèm với mã hóa đầu cuối.",
-    emailHighlight: "Mã hóa lai RSA-2048 + AES-256",
-
-    // Experience Section Translations
-    experienceLabel: "CÔNG VIỆC & THỰC TẬP",
-    experienceTitle: "Kinh nghiệm thực tế",
-    experienceDesc: "Quá trình làm việc và thực tập trong lĩnh vực kiểm thử phần mềm (QA/QC).",
-    expTypeIntern: "Thực tập",
-    expTypeWork: "Công việc",
-    expFukudaAIRole: "Software Tester",
-    expFukudaAIDesc: "Software Tester tại FukudaAI (Tháng 10/2026 – Hiện tại)",
-    expFukudaAIPoint1: "Thực hiện kiểm thử phần mềm tự động (Automation) và thủ công (Manual) cho các phần mềm kỹ thuật cơ khí, kiểm tra thuật toán tính toán và mô phỏng chuyên ngành.",
-    expFukudaAIPoint2: "Thiết kế kế hoạch kiểm thử, kịch bản (test scenarios) và bộ test case chi tiết bao quát chức năng, giao diện và các trường hợp biên.",
-    expFukudaAIPoint3: "Xây dựng và bảo trì các kịch bản kiểm thử tự động bằng Python, xác thực logic nghiệp vụ, luồng người dùng và tích hợp API.",
-    expFukudaAIPoint4: "Ghi nhận và theo dõi lỗi qua vòng đời Bug Life Cycle, phối hợp chặt chẽ với lập trình viên và kỹ sư cơ khí để đảm bảo độ tin cậy tối đa.",
-    expASOLRole: "QA Intern",
-    expASOLDesc: "Kỳ thực tập QA 4 tháng tại Alpaca Solutions (Tháng 3/2026 – Tháng 6/2026)",
-    expASOLPoint1: "Thực hiện kiểm thử thủ công cho ứng dụng di động Android, kiểm tra tính năng, tương tác UI, luồng người dùng và các thay đổi mới theo yêu cầu.",
-    expASOLPoint2: "Thiết kế và thực thi test case cho các tính năng chính và các trường hợp biên, áp dụng kiểm thử chức năng, thăm dò và kiểm thử hồi quy để kiểm định chất lượng.",
-    expASOLPoint3: "Xác định, tái hiện và ghi nhận lỗi với các bước tái hiện chi tiết, kết quả mong đợi, kết quả thực tế, mức độ nghiêm trọng kèm hình ảnh chứng minh.",
-    expASOLPoint4: "Xác minh các lỗi đã sửa thông qua kiểm thử hồi quy và phối hợp với lập trình viên để làm rõ yêu cầu, thảo luận vấn đề và đảm bảo tính năng hoạt động chính xác.",
-    expASOLPoint5: "Ứng dụng ChatGPT và Claude để hỗ trợ phân tích yêu cầu, sinh kịch bản kiểm thử, soạn thảo test case và điều tra nguyên nhân gây lỗi.",
-    expMindXRole: "Trợ giảng Lập trình",
-    expMindXDesc: "Trợ giảng tại Trường Công nghệ MindX (Tháng 8/2025 – Hiện tại)",
-    expMindXPoint1: "Hỗ trợ chuẩn bị giáo án và truyền đạt kiến thức lập trình (Scratch, GameMaker, Python, HTML/CSS/JS) cho học viên.",
-    expMindXPoint2: "Hướng dẫn học viên xây dựng tư duy logic lập trình, thiết kế cơ chế tương tác và sửa lỗi (debug) mã nguồn.",
-    expMindXPoint3: "Tổ chức các buổi thực hành, review code và đồng hành cùng học viên hoàn thiện các dự án phần mềm và website cuối khóa.",
-
-    // Timeline Translations
-    timeline2026Title: "Software Tester tại FukudaAI & QA Intern tại Alpaca Solutions",
-    timeline2026Desc: "Làm việc tại FukudaAI với vai trò Software Tester (Auto & Manual cho phần mềm cơ khí) và hoàn thành kỳ thực tập QA 4 tháng tại Alpaca Solutions kiểm thử ứng dụng di động.",
-    timeline2025Title: "Kiểm thử QA & Trợ giảng Lập trình tại MindX",
-    timeline2025Desc: "Thực hiện kiểm thử thủ công và API cho hệ thống E-commerce; đồng hành cùng học viên với vai trò Trợ giảng Lập trình tại MindX.",
-    timeline2024Title: "Kiến thức nền tảng & Kỹ thuật phần mềm",
-    timeline2024Desc: "Nắm vững cơ sở dữ liệu, cấu trúc dữ liệu, thuật toán và nguyên lý kiểm thử chất lượng phần mềm.",
-    timeline2022Title: "Bắt đầu học CNTT tại Đại học Sài Gòn",
-    timeline2022Desc: "Trúng tuyển ngành Công nghệ Thông tin tại Trường Đại học Sài Gòn (SGU), duy trì điểm trung bình tích lũy GPA 3.60 / 4.0."
-  }
+export const OWNER_INFO = {
+  name: "VO THI THUONG",
+  firstName: "VO THI",
+  lastName: "THUONG",
+  role: "QA/QC TESTER",
+  title: "SOFTWARE QUALITY ASSURANCE & TESTING",
+  email: "thuong16052004@gmail.com",
+  phone: "0782 84 59 00",
+  location: "HO CHI MINH CITY, VIETNAM",
+  degree: "BACHELOR OF ENGINEERING IN IT // SAIGON UNIVERSITY",
+  gpa: "GPA 3.60 / 4.0",
+  github: "https://github.com/VThuongg",
+  linkedin: "https://linkedin.com/in/vthuongg",
+  bio: "QA/QC Tester with hands-on experience in manual & automated software testing. Specializing in test case design, Postman API verification, and defect lifecycle management across SDLC/STLC.",
+  status: "OPEN TO OPPORTUNITIES",
+  issue: "ISSUE 2026 // VOL. 01"
 };
+
+export const EXPERIENCES_DATA = [
+  {
+    id: "fukuda-ai",
+    company: "Fukuda.AI",
+    role: "SOFTWARE TESTER",
+    period: "OCT 2026 – PRESENT",
+    timebar: "OCT 2026 - PRESENT",
+    points: [
+      "Test quotation and ERP systems for mechanical engineering operations.",
+      "Test 3D models and 2D drawing extraction features.",
+      "Test AI-powered features, and design test cases for functional, UI, and performance scenarios.",
+      "Log and track defects through the Bug Life Cycle with engineers and developers."
+    ],
+    tags: ["ERP TESTING", "3D / 2D", "AI TESTING", "MANUAL TESTING", "API TESTING"]
+  },
+  {
+    id: "asol",
+    company: "ALPACA SOLUTIONS",
+    role: "QA INTERN",
+    period: "MAR 2026 – JUN 2026",
+    timebar: "MAR 2026 - JUN 2026",
+    points: [
+      "Tested Android apps manually: features, UI, user flows, and new changes against requirements.",
+      "Wrote and executed functional, exploratory, and regression test cases.",
+      "Reported defects with clear steps, severity, and screenshots; verified fixes with developers."
+    ],
+    tags: ["MANUAL TESTING", "ANDROID APPS", "REGRESSION", "POSTMAN", "BUG REPORTING"]
+  },
+  {
+    id: "mindx",
+    company: "MINDX TECHNOLOGY SCHOOL",
+    role: "PROGRAMMING TEACHING ASSISTANT",
+    period: "AUG 2025 – PRESENT",
+    timebar: "AUG 2025 - PRESENT",
+    points: [
+      "Supported programming courses (Scratch, GameMaker, Python, HTML/CSS/JS).",
+      "Guided students in programming logic and debugging.",
+      "Mentored students on their final software and web projects."
+    ],
+    tags: ["PYTHON", "ALGORITHMS", "DEBUGGING", "SCRATCH", "HTML/CSS/JS"]
+  }
+];
+
+export const EDUCATION_BLOCKS = [
+  {
+    badgeText: "ONE",
+    year: "2022 – 2026",
+    institution: "SAIGON UNIVERSITY (SGU)",
+    major: "BACHELOR OF ENGINEERING IN INFORMATION TECHNOLOGY",
+    detail: "GPA: 3.60 / 4.0. Strong foundation in software testing fundamentals, systems analysis, database design, and defect lifecycle management."
+  },
+  {
+    badgeText: "TWO",
+    year: null,
+    tag: "ACADEMIC FOCUS",
+    institution: "RELEVANT COURSEWORK",
+    major: "SOFTWARE TESTING, DATABASES & SYSTEMS",
+    detail: "Key coursework and technical foundations: Software Testing Methodologies (Manual & Automated), Defect Tracking & Bug Lifecycle, Systems Analysis & Design, Relational Database Design (MySQL, PostgreSQL), RESTful API Architecture & Verification, and Data Structures & Algorithms."
+  }
+];
+
+export const SKILLS_COMPETENCIES = [
+  { label: "MANUAL TESTING", level: "ADVANCED", desc: "Test scenario design, boundary value analysis, exploratory & regression testing" },
+  { label: "TEST CASE DESIGN", level: "ADVANCED", desc: "Equivalence partitioning, test matrix formulation, checklist & coverage optimization" },
+  { label: "API TESTING", level: "PROFICIENT", desc: "Postman collections, HTTP status verification, header/payload validation & automated tests" },
+  { label: "SQL / DATABASES", level: "PROFICIENT", desc: "Complex queries, joins, relational schema validation & database integrity checks" },
+  { label: "AUTOMATION TEST", level: "INTERMEDIATE", desc: "Python test automation scripts, workflow verification & assertions" },
+  { label: "BUG LIFECYCLE", level: "ADVANCED", desc: "Defect reproduction, severity/priority triage, root cause analysis & regression verification" }
+];
+
+export const SKILLS_PERCENTAGES = SKILLS_COMPETENCIES;
+
+export const SKILLS_PILLS = [
+  "POSTMAN", "SQL", "PYTHON", "JAVA", "JAVASCRIPT", "TYPESCRIPT", 
+  "MYSQL", "POSTGRESQL", "REST APIS", "JSON", "GIT", "GITHUB ACTIONS", 
+  "FIGMA", "CHATGPT", "CLAUDE", "EXCEL / SHEETS", "SDLC / STLC", "AGILE / SCRUM"
+];
+
+export const PROJECTS_DATA = [
+  {
+    title: "E-COMMERCE TEST AUTOMATION FRAMEWORK",
+    role: "PERSONAL PROJECT",
+    period: "JUL 2026 – PRESENT",
+    tech: "PLAYWRIGHT, TYPESCRIPT, GITHUB ACTIONS, ALLURE",
+    desc: "Built an end-to-end automation framework for e-commerce flows (authentication, search, cart, checkout) using the Page Object Model and custom fixtures, running on Chromium, Firefox, and WebKit. Added API testing, network mocking, and visual regression. A GitHub Actions pipeline runs the suite on every push and publishes Playwright HTML and Allure reports.",
+    github: "https://github.com/VThuongg/playwright-learning",
+    demo: null
+  },
+  {
+    title: "E-COMMERCE MANAGEMENT SYSTEM",
+    role: "QA TESTER & ANALYST",
+    period: "JAN 2025 – MAY 2025 | TEAM OF 4",
+    tech: "PHP, MYSQL, JAVASCRIPT, POSTMAN",
+    desc: "Reviewed requirements and designed manual test cases for authentication, product management, order processing, and role-based access control (RBAC). Performed functional and API testing across key workflows and validated bug fixes via regression testing.",
+    github: "https://github.com/VThuongg/Mobile-Phone-Store",
+    demo: null
+  },
+  {
+    title: "SECURE EMAIL ENCRYPTION",
+    role: "SECURITY & SYSTEM TESTING",
+    period: "SEP 2024 – DEC 2024",
+    tech: "FLASK, PYTHON, PYCRYPTODOME, RSA-2048, AES-256",
+    desc: "Architected a secure email web application with hybrid cryptography. Conducted rigorous boundary testing on cryptographic operations, key generation routines, and encrypted file attachment handling.",
+    github: "https://github.com/VThuongg/Secure-Email-Encryption",
+    demo: "https://secure-email-encryption.onrender.com/"
+  },
+  {
+    title: "PROTGO // PROTEIN CLASSIFICATION",
+    role: "GRADUATION THESIS",
+    period: "JAN 2026 – MAY 2026",
+    tech: "PYTHON, PYTORCH, HUGGINGFACE, XGBOOST",
+    desc: "Multi-expert data processing pipeline and model evaluation system for automated protein function classification. Evaluated test datasets and metrics (Fmax 0.747, AuPRC 0.785).",
+    github: "https://github.com/VThuongg/protgo",
+    demo: null
+  }
+];
+
+export const VOLUNTEER_DATA = [
+  {
+    num: "01",
+    org: "Faculty of IT Youth Union, Saigon University",
+    role: "Executive Committee Member (2023 – 2024) → Standing Committee Member (2024 – 2026)",
+    desc: "Served on the Faculty Youth Union's Executive Committee, then promoted to the Standing Committee. Helped plan and coordinate Youth Union activities for IT Faculty students, including community programs for children with disabilities.",
+    image: null
+  },
+  {
+    num: "02",
+    org: "Mid-Autumn Festival Program",
+    role: "Organizer // 2024, 2025 · Nguyen Dinh Chieu Special School",
+    desc: "Organized Mid-Autumn Festival activities for students at Nguyen Dinh Chieu Special School.",
+    image: null
+  },
+  {
+    num: "03",
+    org: "Lunar New Year (Tet) Program",
+    role: "Organizer // 2025, 2026 · Nguyen Dinh Chieu Special School",
+    desc: "Organized Tet celebration activities for students at Nguyen Dinh Chieu Special School.",
+    image: null
+  }
+];
+
+export const LANGUAGES_DATA = [
+  { language: "VIETNAMESE", level: "NATIVE / FIRST LANGUAGE", proficiency: "NATIVE" }
+];
+
+export const SOFT_SKILLS_DATA = [
+  { num: "01", title: "ANALYTICAL & EDGE-CASE MINDSET", desc: "Anticipating failure scenarios, boundary conditions, and user misbehaviors" },
+  { num: "02", title: "DEFECT INVESTIGATION & TRIAGE", desc: "Isolating root causes, capturing logs, and writing unambiguous bug tickets" },
+  { num: "03", title: "CROSS-FUNCTIONAL COLLABORATION", desc: "Communicating transparently with Developers, Product Owners, and stakeholders" },
+  { num: "04", title: "ATTENTION TO DETAIL & QUALITY ADVOCACY", desc: "Rigorous requirement traceability, verification discipline, and test coverage" }
+];
+
+export const HOBBIES_DATA = [
+  { num: "01", title: "LOGIC PUZZLES", desc: "Edge-case analysis & deductive reasoning" },
+  { num: "02", title: "TECH EXPLORATION", desc: "Evaluating emerging automation & AI tools" },
+  { num: "03", title: "ENGINEERING BOOKS", desc: "Software testing, architecture & system design" },
+  { num: "04", title: "CHESS & STRATEGY", desc: "Analytical mindset & tactical planning" }
+];

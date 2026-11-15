@@ -1,211 +1,83 @@
-import { useState } from "react";
-import { TIMELINE } from "../constants/portfolioData";
+import { OWNER_INFO } from "../constants/portfolioData";
 
-export function About({ aboutRef, aboutInView, t }) {
-  const [activeFile, setActiveFile] = useState("Bio.json");
-  const [runStatus, setRunStatus] = useState("idle"); // idle, running, success
-  const [consoleLogs, setConsoleLogs] = useState([]);
-
-  const fileContents = {
-    "Bio.json": `{
-  "name": "${t("ownerName")}",
-  "role": "${t("bioRole")}",
-  "location": "Ho Chi Minh City 🇻🇳",
-  "passion": "Software Quality Assurance & Testing",
-  "status": "Open for work 🚀"
-}`,
-    "Stack.js": `const qaEngineer = {
-  testing: ["Manual Testing", "Automation Testing", "API Testing (Postman)", "Regression", "Functional & UI"],
-  databases: ["PostgreSQL", "MySQL", "SQL"],
-  tools: ["Postman", "Git", "GitHub Actions", "Figma"],
-  languages: ["Python", "Java", "TypeScript", "JavaScript"]
-};`,
-    "Philosophy.txt": `"Quality is never an accident.
-I focus on edge cases,
-meticulous test case design, and
-preventing defects early to deliver
-reliable, user-focused products."`
-  };
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
-    e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
-  };
-
-  const handleRunCode = () => {
-    if (runStatus === "running") return;
-    setRunStatus("running");
-    setConsoleLogs([]);
-    
-    // Simulate terminal compiling & execution
-    const steps = [
-      { text: "$ node Stack.js", delay: 100 },
-      { text: "⏳ Running test suites & verifying QA stack...", delay: 400 },
-      { text: "✓ QA & Test suites passed. 0 defects found.", delay: 800 },
-      { text: `🚀 Output: ${t("ownerName")} is ready to deliver quality software! ✨`, delay: 1300 }
-    ];
-
-    steps.forEach((step) => {
-      setTimeout(() => {
-        setConsoleLogs((prev) => [...prev, step.text]);
-        if (step.text.startsWith("🚀")) {
-          setRunStatus("success");
-        }
-      }, step.delay);
-    });
-  };
-
+export function About() {
   return (
-    <section id="about" className="about-section">
-      <div ref={aboutRef} className="about-container">
-        <span className="about-label">{t("aboutLabel")}</span>
-        <h2 className="about-title">
-          {t("aboutTitle1")}<br />
-          <span className="about-title-highlight">{t("aboutTitle2")}</span>
-        </h2>
+    <section id="about" className="magazine-section section-about">
+      <div className="magazine-edge-tab" />
+      <div className="magazine-page-num">PAGE 02 / 09</div>
 
-        {/* Bento Grid */}
-        <div className={`about-bento-grid ${aboutInView ? "in-view" : ""}`}>
-          {/* Tile 1: The Bio Narrative */}
-          <div 
-            className="bento-tile bio-tile glass-card spotlight-card" 
-            onMouseMove={handleMouseMove}
-          >
-            <h3 className="bento-tile-title">{t("tabStory")}</h3>
-            <p className="about-desc">{t("aboutDesc1")}</p>
-            <p className="about-desc">{t("aboutDesc2")}</p>
-            
-            <div className="about-tags">
-              {[
-                ["Manual Testing", "#06b6d4"],
-                ["Automation", "#10b981"],
-                ["Postman & API", "#FF6C37"],
-                ["Bug Life Cycle", "#ec4899"],
-                ["Python", "#ca8a04"],
-                ["SQL / Database", "#0284c7"]
-              ].map(([tag, color]) => (
-                <span
-                  key={tag}
-                  className="about-tag"
-                  style={{
-                    borderColor: `${color}30`,
-                    backgroundColor: `${color}12`,
-                    color: color,
-                  }}
+      <div className="container">
+        {/* Meta Header */}
+        <div className="magazine-meta-header reveal-item">
+          <span>02. BIOGRAPHY & OVERVIEW</span>
+          <span>SAIGON UNIVERSITY // BE IT</span>
+          <span>VT® 001-ABOUT</span>
+        </div>
+
+        <div className="about-editorial-grid">
+          {/* Left Column: Portrait Box & Metadata */}
+          <div className="about-portrait-box reveal-item">
+            <div className="about-portrait-art">
+              <img
+                src="/portrait.jpg"
+                alt={OWNER_INFO.name}
+                className="about-portrait-img"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+              <div className="about-fallback-box">
+                <span role="img" aria-label="Portrait">■</span>
+                <span style={{ fontSize: "14px", marginTop: "8px", letterSpacing: "1px" }}>QA // 2026</span>
+              </div>
+            </div>
+
+            <div style={{ width: "100%", fontSize: "12px", lineHeight: "1.6" }}>
+              <div style={{ fontWeight: "700", textTransform: "uppercase" }}>{OWNER_INFO.name}</div>
+              <div style={{ color: "var(--muted)" }}>{OWNER_INFO.role}</div>
+              <hr />
+              <div><strong>EDU:</strong> SAIGON UNIVERSITY</div>
+              <div><strong>GPA:</strong> 3.60 / 4.0</div>
+              <div><strong>LOC:</strong> HO CHI MINH CITY</div>
+            </div>
+          </div>
+
+          {/* Right Column: Title & Text Body */}
+          <div>
+            <h2 className="about-big-title reveal-item">ABOUT ME</h2>
+
+            <div className="about-content-body reveal-item">
+              <p>
+                I am a dedicated <strong>QA/QC Tester</strong> with hands-on expertise in manual testing methodologies, test scenario architecture, and automated test execution. Graduated with a Bachelor of Engineering in Information Technology from <strong>Saigon University (SGU)</strong> with a cumulative <strong>GPA of 3.60 / 4.0</strong>.
+              </p>
+
+              <p>
+                Currently working at <strong>Fukuda.AI</strong> as a Software Tester, testing quotation and ERP systems, 3D models, 2D drawing extraction, and AI features. Previously, I completed a 4-month QA Internship at <strong>Alpaca Solutions</strong> validating Android mobile applications, designing comprehensive functional & regression test suites, and performing API verification.
+              </p>
+
+              <p>
+                My approach to software quality assurance is analytical and detail-oriented: identifying defects early in the SDLC/STLC cycle, validating boundary and edge-case conditions, ensuring accurate requirement coverage, and communicating seamlessly with developers to build dependable, high-quality digital products.
+              </p>
+
+              <div style={{ display: "flex", gap: "12px", marginTop: "24px" }}>
+                <a
+                  href={OWNER_INFO.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="pill"
                 >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Tile 2: Interactive IDE Editor */}
-          <div 
-            className="bento-tile ide-tile glass-card spotlight-card"
-            onMouseMove={handleMouseMove}
-          >
-            <div className="ide-header">
-              <div className="ide-dots">
-                {["#ef4444", "#f59e0b", "#22c55e"].map(c => (
-                  <span key={c} className="ide-dot" style={{ background: c }} />
-                ))}
+                  LINKEDIN PROFILE →
+                </a>
+                <a
+                  href={OWNER_INFO.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="pill"
+                  style={{ background: "transparent", color: "var(--ink)", border: "1px solid var(--ink)" }}
+                >
+                  GITHUB REPOSITORY ↗
+                </a>
               </div>
-              <div className="ide-tabs">
-                {Object.keys(fileContents).map(fileName => (
-                  <button
-                    key={fileName}
-                    className={`ide-tab ${activeFile === fileName ? "active" : ""}`}
-                    onClick={() => {
-                      setActiveFile(fileName);
-                      setRunStatus("idle");
-                      setConsoleLogs([]);
-                    }}
-                  >
-                    {fileName}
-                  </button>
-                ))}
-              </div>
-              <button 
-                className={`ide-run-btn ${runStatus === "running" ? "running" : ""}`} 
-                onClick={handleRunCode}
-                disabled={runStatus === "running"}
-              >
-                {runStatus === "running" ? "Running..." : "▶ Run"}
-              </button>
-            </div>
-
-            <div className="ide-editor-container">
-              <div className="ide-line-numbers">
-                {fileContents[activeFile].split("\n").map((_, i) => (
-                  <span key={i}>{i + 1}</span>
-                ))}
-              </div>
-              <pre className="ide-code">
-                <code>{fileContents[activeFile]}</code>
-              </pre>
-            </div>
-
-            {/* Console output */}
-            {(runStatus !== "idle" || consoleLogs.length > 0) && (
-              <div className="ide-console">
-                <div className="ide-console-header">Console Output</div>
-                <div className="ide-console-logs">
-                  {consoleLogs.map((log, i) => (
-                    <div 
-                      key={i} 
-                      className={`ide-log-line ${
-                        log.startsWith("🚀") ? "success" : log.startsWith("⏳") ? "pending" : log.startsWith("✓") ? "verified" : ""
-                      }`}
-                    >
-                      {log}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Tile 3: Core Values */}
-          <div 
-            className="bento-tile values-tile glass-card spotlight-card"
-            onMouseMove={handleMouseMove}
-          >
-            <h3 className="bento-tile-title">{t("valuesTitle")}</h3>
-            <div className="values-list">
-              {[1, 2, 3].map((num) => (
-                <div key={num} className="value-item">
-                  <h4 className="value-item-title">
-                    <span className="value-dot">✦</span> {t(`value${num}Title`)}
-                  </h4>
-                  <p className="value-item-desc">{t(`value${num}Desc`)}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tile 4: Timeline Journey */}
-          <div 
-            className="bento-tile journey-tile glass-card spotlight-card"
-            onMouseMove={handleMouseMove}
-          >
-            <h3 className="bento-tile-title">{t("journeyTitle")}</h3>
-            <div className="about-timeline-list">
-              {TIMELINE.map((item, index) => (
-                <div key={item.titleKey} className="about-timeline-item">
-                  <div className="about-timeline-dot-wrapper">
-                    <div className="about-timeline-dot"></div>
-                    {index !== TIMELINE.length - 1 && <div className="about-timeline-line"></div>}
-                  </div>
-                  <div className="about-timeline-content">
-                    <div className="about-timeline-year">{item.year}</div>
-                    <h4 className="about-timeline-heading">{t(item.titleKey)}</h4>
-                    <p className="about-timeline-text">{t(item.descKey)}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

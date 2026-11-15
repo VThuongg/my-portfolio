@@ -1,73 +1,119 @@
-export function Hero({ heroRef, heroInView, scrollTo, t }) {
+import { OWNER_INFO } from "../constants/portfolioData";
+
+export function Hero({ scrollTo }) {
   return (
-    <section id="home" ref={heroRef} className="hero-section">
-      <div className="hero-bg-circle" />
-      <div className="hero-bg-grid" />
+    <section id="hero" className="magazine-section section-hero">
+      <div className="magazine-edge-tab" />
+      <div className="magazine-page-num">PAGE 01 / 09</div>
 
-      <div className="hero-container">
-        {/* Left Column - Text Details */}
-        <div className={`hero-content ${heroInView ? "in-view" : ""}`}>
-          <div className="hero-tagline">
-            <span className="hero-tagline-line" />
-            <span className="hero-tagline-text">{t("heroSubtitle")}</span>
-          </div>
-
-          <h1 className="hero-title">
-            {t("heroTitlePrefix")}<br />
-            <span className="hero-title-name gradient-text">{t("ownerName")}</span>
-          </h1>
-
-          <p className="hero-desc">{t("heroDesc")}</p>
-
-          <div className="hero-btns">
-            <button
-              onClick={() => scrollTo("Projects")}
-              className="hero-btn-primary"
-            >
-              {t("viewProjects")}
-            </button>
-          </div>
-
-          <div className="hero-stats">
-            {[
-              [t("statProjectsVal"), t("statProjectsLabel")],
-              [t("statEduVal"), t("statEduLabel")],
-              [t("statLocVal"), t("statLocLabel")],
-            ].map(([num, label]) => (
-              <div key={label} className="hero-stat-item">
-                <p className="hero-stat-number">{num}</p>
-                <p className="hero-stat-label">{label}</p>
-              </div>
-            ))}
-          </div>
+      <div className="container">
+        {/* Meta Header */}
+        <div className="magazine-meta-header">
+          <span>ISSUE 2026 // VOL. 01</span>
+          <span>PORTFOLIO // QA-QC TESTER</span>
+          <span>VT® 000-2026</span>
         </div>
 
-        {/* Right Column - Avatar Visual */}
-        <div className={`hero-avatar-col ${heroInView ? "in-view" : ""}`}>
-          <div className="hero-avatar-wrapper">
-            <div className="hero-avatar-glow" />
-            <div className="hero-avatar-content">
-              <div className="hero-avatar-emoji">👩‍💻</div>
-              <p className="hero-avatar-name">{t("ownerName")}</p>
-              <p className="hero-avatar-title">{t("heroAvatarTitle")}</p>
-              <div className="hero-avatar-status">
-                <span className="status-dot animate-pulse"></span>
-                <span className="status-text">Open for work</span>
-              </div>
+        <div className="hero-columns-grid">
+          {/* Left Column: Name, Pills, Subhead, Bio, Actions */}
+          <div className="hero-text-block">
+            <h1 className="hero-main-title">
+              <span className="hero-title-line-mask">
+                <span className="hero-title-line hero-line-1">VO THI</span>
+              </span>
+              <span className="hero-title-line-mask">
+                <span className="hero-title-line hero-line-2">THUONG</span>
+              </span>
+            </h1>
+
+            <div style={{ marginBottom: "14px", display: "flex", flexWrap: "wrap", gap: "8px" }}>
+              <span className="pill olive">
+                {OWNER_INFO.role}
+              </span>
+              <span className="pill" style={{ border: "1px solid var(--cream)" }}>
+                {OWNER_INFO.degree}
+              </span>
             </div>
 
-            {/* Floating Tech Icons */}
-            <div className="floating-tech tech-react" style={{ "--float-delay": "0s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman" />
+            <div className="hero-subhead">
+              {OWNER_INFO.title}
             </div>
-            <div className="floating-tech tech-spring" style={{ "--float-delay": "1.5s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" />
+
+            <p className="hero-summary-text">
+              {OWNER_INFO.bio}
+            </p>
+
+            <div style={{ display: "flex", gap: "12px", marginTop: "22px" }}>
+              <button
+                onClick={() => scrollTo("projects")}
+                className="pill olive"
+                style={{ cursor: "pointer", padding: "10px 22px" }}
+              >
+                VIEW PROJECTS →
+              </button>
+              <button
+                onClick={() => scrollTo("contact")}
+                className="pill"
+                style={{ cursor: "pointer", border: "1px solid var(--cream)", padding: "10px 22px" }}
+              >
+                GET IN TOUCH
+              </button>
             </div>
-            <div className="floating-tech tech-python" style={{ "--float-delay": "3s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
+          </div>
+
+          {/* Right Column: Rectangular Portrait Frame (Ratio 3:4, solid olive fallback, no emoji/placeholder text) + Overlapping Specification Card (~20% overlap) */}
+          <div className="hero-visual-wrapper">
+            <div className="hero-portrait-frame">
+              <img
+                src="/portrait.jpg"
+                alt={OWNER_INFO.name}
+                className="hero-portrait-img"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
             </div>
-            <div className="floating-tech tech-js" style={{ "--float-delay": "4.5s" }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+
+            {/* Specification Card shifted to lower right, only overlapping ~20% of frame */}
+            <div className="hero-meta-stamp-card">
+              <svg className="hero-barcode-svg" viewBox="0 0 100 24" fill="currentColor">
+                <rect x="0" y="0" width="3" height="24" />
+                <rect x="5" y="0" width="1" height="24" />
+                <rect x="8" y="0" width="4" height="24" />
+                <rect x="14" y="0" width="2" height="24" />
+                <rect x="18" y="0" width="3" height="24" />
+                <rect x="23" y="0" width="1" height="24" />
+                <rect x="26" y="0" width="4" height="24" />
+                <rect x="32" y="0" width="2" height="24" />
+                <rect x="36" y="0" width="5" height="24" />
+                <rect x="43" y="0" width="2" height="24" />
+                <rect x="47" y="0" width="1" height="24" />
+                <rect x="50" y="0" width="3" height="24" />
+                <rect x="55" y="0" width="4" height="24" />
+                <rect x="61" y="0" width="2" height="24" />
+                <rect x="65" y="0" width="1" height="24" />
+                <rect x="68" y="0" width="4" height="24" />
+                <rect x="74" y="0" width="3" height="24" />
+                <rect x="79" y="0" width="2" height="24" />
+                <rect x="83" y="0" width="4" height="24" />
+                <rect x="89" y="0" width="1" height="24" />
+                <rect x="92" y="0" width="3" height="24" />
+                <rect x="97" y="0" width="2" height="24" />
+              </svg>
+
+              <div style={{ fontSize: "10px", letterSpacing: "1px", textTransform: "uppercase", opacity: 0.8 }}>
+                SPECIFICATION // QA-QC TEST PROTOCOL
+              </div>
+
+              <hr />
+
+              <div style={{ fontSize: "11px", lineHeight: "1.6" }}>
+                <div><strong>NAME:</strong> {OWNER_INFO.name}</div>
+                <div><strong>POSITION:</strong> {OWNER_INFO.role}</div>
+                <div><strong>LOCATION:</strong> {OWNER_INFO.location}</div>
+                <div><strong>EDUCATION:</strong> SGU (GPA 3.60 / 4.0)</div>
+                <div><strong>STATUS:</strong> {OWNER_INFO.status}</div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,94 +1,114 @@
 import { useState } from "react";
+import { OWNER_INFO } from "../constants/portfolioData";
 
-export function Contact({ contactRef, contactInView, t }) {
+export function Contact() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("thuong16052004@gmail.com");
+    navigator.clipboard.writeText(OWNER_INFO.email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 2200);
   };
 
-  const socials = [
-    {
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/vthuongg",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: "block" }}>
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-          <rect width="4" height="12" x="2" y="9" />
-          <circle cx="4" cy="4" r="2" />
-        </svg>
-      ),
-      color: "#0a66c2",
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/VThuongg",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: "block" }}>
-          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-          <path d="M9 18c-4.51 2-5-2-7-2" />
-        </svg>
-      ),
-      color: "#181717",
-    },
-  ];
-
   return (
-    <section id="contact" ref={contactRef} className="contact-section">
-      <div className={`contact-container ${contactInView ? "in-view" : ""}`}>
-        <span className="contact-label">{t("contactLabel")}</span>
-        <h2 className="contact-title">{t("contactTitle")}</h2>
-        <p className="contact-desc">{t("contactDesc")}</p>
+    <footer id="contact" className="magazine-section section-contact">
+      <div className="magazine-edge-tab" />
+      <div className="magazine-page-num">PAGE 09 / 09</div>
 
-        {/* Email card */}
-        <div className="contact-email-card">
-          <div className="contact-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent-color)", display: "block" }}>
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      <div className="container">
+        {/* Meta Header */}
+        <div className="magazine-meta-header reveal-item">
+          <span>09. CORRESPONDENCE</span>
+          <span>DIRECT CONTACT & NETWORKING</span>
+          <span>VT® 008-FIN</span>
+        </div>
+
+        <h2 className="contact-section-title reveal-item">GET IN TOUCH</h2>
+
+        <div className="contact-layout-grid">
+          <div>
+            <p className="contact-desc-text reveal-item">
+              Available for full-time <strong>QA/QC Tester</strong> roles, test automation initiatives, and software quality assurance collaborations. Feel free to reach out via email or connect on LinkedIn and GitHub.
+            </p>
+
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", alignItems: "center" }}>
+              <button
+                onClick={copyEmail}
+                className="pill"
+                style={{ cursor: "pointer", padding: "10px 22px" }}
+              >
+                {copied ? "✓ EMAIL COPIED" : `COPY: ${OWNER_INFO.email}`}
+              </button>
+
+              <a
+                href={OWNER_INFO.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="pill"
+                style={{ background: "transparent", color: "var(--cream)", border: "1px solid var(--cream)", padding: "10px 20px" }}
+              >
+                LINKEDIN ↗
+              </a>
+
+              <a
+                href={OWNER_INFO.github}
+                target="_blank"
+                rel="noreferrer"
+                className="pill"
+                style={{ background: "transparent", color: "var(--cream)", border: "1px solid var(--cream)", padding: "10px 20px" }}
+              >
+                GITHUB ↗
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-meta-box reveal-item">
+            <div style={{ fontFamily: "var(--font-display)", fontSize: "18px", color: "var(--olive)" }}>
+              SPECIFICATION ARCHIVE
+            </div>
+            <div style={{ fontSize: "12px", lineHeight: "1.6" }}>
+              <div><strong>LOCATION:</strong> {OWNER_INFO.location}</div>
+              <div><strong>EMAIL:</strong> {OWNER_INFO.email}</div>
+              <div><strong>STATUS:</strong> {OWNER_INFO.status}</div>
+              <div><strong>CODE:</strong> VT-2026-QAQC</div>
+            </div>
+            <hr />
+            <svg viewBox="0 0 100 20" fill="currentColor" style={{ width: "100%", height: "26px", color: "var(--cream)" }}>
+              <rect x="0" y="0" width="3" height="20" />
+              <rect x="5" y="0" width="1" height="20" />
+              <rect x="8" y="0" width="4" height="20" />
+              <rect x="14" y="0" width="2" height="20" />
+              <rect x="18" y="0" width="3" height="20" />
+              <rect x="23" y="0" width="1" height="20" />
+              <rect x="26" y="0" width="4" height="20" />
+              <rect x="32" y="0" width="2" height="20" />
+              <rect x="36" y="0" width="5" height="20" />
+              <rect x="43" y="0" width="2" height="20" />
+              <rect x="47" y="0" width="1" height="20" />
+              <rect x="50" y="0" width="3" height="20" />
+              <rect x="55" y="0" width="4" height="20" />
+              <rect x="61" y="0" width="2" height="20" />
+              <rect x="65" y="0" width="1" height="20" />
+              <rect x="68" y="0" width="4" height="20" />
+              <rect x="74" y="0" width="3" height="20" />
+              <rect x="79" y="0" width="2" height="20" />
+              <rect x="83" y="0" width="4" height="20" />
+              <rect x="89" y="0" width="1" height="20" />
+              <rect x="92" y="0" width="3" height="20" />
+              <rect x="97" y="0" width="2" height="20" />
             </svg>
           </div>
-          <div className="contact-card-details">
-            <span className="contact-card-label">Email</span>
-            <span className="contact-card-val">thuong16052004@gmail.com</span>
-          </div>
-          <button
-            onClick={copyEmail}
-            className={`contact-copy-btn ${copied ? "copied" : ""}`}
-          >
-            {copied ? (
-              <>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: "block" }}><polyline points="20 6 9 17 4 12"/></svg>
-                {t("contactCopied")}
-              </>
-            ) : (
-              <>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: "block" }}><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                {t("contactCopyEmail")}
-              </>
-            )}
-          </button>
         </div>
 
-        {/* Social buttons */}
-        <div className="contact-socials-row">
-          {socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noreferrer"
-              className="contact-social-btn"
-            >
-              <span className="social-icon">{s.icon}</span>
-              <span className="social-label">{s.label}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: "block", marginLeft: "auto", opacity: 0.4 }}><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-            </a>
-          ))}
+        <div className="contact-footer-line">
+          <div>
+            VT® RESUME PRESENTATION // {OWNER_INFO.name}
+          </div>
+          <div>
+            ALL RIGHTS RESERVED © 2026
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
