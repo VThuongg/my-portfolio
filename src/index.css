@@ -64,7 +64,16 @@ a {
 
 /* Section Common Structure */
 .magazine-section,
-section[id] {
+section[id],
+#hero,
+#about,
+#experience,
+#education,
+#skills,
+#projects,
+#volunteer,
+#info,
+#contact {
   position: relative;
   padding: 70px 0 80px;
   border-bottom: 1px solid var(--ink);
@@ -220,11 +229,14 @@ hr {
 .magazine-nav {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 100;
   background-color: #1E1E1E !important;
   color: var(--cream);
-  border-bottom: 1px solid rgba(238, 233, 220, 0.2);
-  width: 100%;
+  border-bottom: 1px solid rgba(238, 233, 220, 0.25);
+  height: 64px;
   max-height: 64px;
 }
 
@@ -237,7 +249,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1E1E1E;
+  background-color: transparent;
   position: relative;
   z-index: 100;
 }
@@ -373,7 +385,7 @@ hr {
 
 .hero-main-title {
   font-family: var(--font-display) !important;
-  font-size: clamp(80px, 13vw, 200px);
+  font-size: clamp(64px, 9.5vw, 140px);
   color: var(--cream);
   letter-spacing: 0;
   line-height: 0.95;
@@ -426,8 +438,8 @@ hr {
 
 .hero-columns-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -453,42 +465,48 @@ hr {
 /* Right Column: Visual Frame & Overlapping Specification Card */
 .hero-visual-wrapper {
   position: relative;
-  width: 100%;
-  min-height: 440px;
-  display: flex;
-  justify-content: flex-start;
-  padding-right: 50px;
-  padding-bottom: 30px;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  padding-right: 95px;
+  padding-bottom: 35px;
 }
 
 .hero-portrait-frame {
-  width: 290px;
+  width: 380px;
+  max-width: 100%;
   aspect-ratio: 3 / 4;
   border: 1px solid var(--cream);
-  background: var(--olive);
+  background: #1E1E1E;
   overflow: hidden;
   position: relative;
+  padding: 0;
 }
 
 .hero-portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
+  padding: 0;
 }
 
 .hero-meta-stamp-card {
   position: absolute;
   bottom: 0;
-  right: 10px;
-  width: 230px;
+  right: 0;
+  width: max-content;
+  min-width: 260px;
+  white-space: nowrap;
   background: var(--ink);
   border: 1px solid var(--cream);
-  padding: 16px;
+  padding: 14px 18px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   z-index: 2;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
 
 .hero-barcode-svg {
@@ -524,37 +542,35 @@ hr {
 
 .about-portrait-art {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 60vh;
-  background: var(--ink);
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--ink);
+  background: #1E1E1E;
   color: var(--cream);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 54px;
   margin-bottom: 14px;
   overflow: hidden;
   position: relative;
+  padding: 0;
 }
 
 .about-portrait-img {
   width: 100%;
   height: 100%;
-  max-height: 60vh;
   object-fit: cover;
+  object-position: center top;
   display: block;
+  position: relative;
+  z-index: 2;
+  padding: 0;
 }
 
 .about-fallback-box {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.about-portrait-art:has(.about-portrait-img:not([style*="display: none"])) .about-fallback-box {
-  display: none;
+  z-index: 1;
 }
 
 .about-big-title {
@@ -1088,15 +1104,15 @@ hr {
 
   .hero-portrait-frame {
     width: 100%;
-    max-width: 290px;
+    max-width: 380px;
     aspect-ratio: 3 / 4;
-    height: auto;
   }
 
   .hero-meta-stamp-card {
     position: static;
     width: 100%;
-    max-width: 290px;
+    max-width: 380px;
+    white-space: normal;
   }
 
   .volunteer-big-heading {
@@ -1110,13 +1126,16 @@ hr {
   }
 
   .about-portrait-art {
-    max-height: 60vh;
+    aspect-ratio: 3 / 4;
   }
 
   .about-portrait-art img,
   .about-portrait-img {
-    max-height: 60vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center top;
+    display: block;
   }
 
   .nav-links-deck {

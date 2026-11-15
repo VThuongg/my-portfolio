@@ -19,7 +19,7 @@ export function About() {
           <div className="about-portrait-box reveal-item">
             <div className="about-portrait-art">
               <img
-                src="/portrait.jpg"
+                src={`${import.meta.env.BASE_URL}portrait.jpg`}
                 alt={OWNER_INFO.name}
                 className="about-portrait-img"
                 onError={(e) => {
@@ -48,11 +48,11 @@ export function About() {
 
             <div className="about-content-body reveal-item">
               <p>
-                I am a dedicated <strong>QA/QC Tester</strong> with hands-on expertise in manual testing methodologies, test scenario architecture, and automated test execution. Graduated with a Bachelor of Engineering in Information Technology from <strong>Saigon University (SGU)</strong> with a cumulative <strong>GPA of 3.60 / 4.0</strong>.
+                I am a dedicated <strong>QA/QC Tester</strong> with hands-on expertise in manual testing methodologies, test scenario architecture, and a growing foundation in test automation. Graduated with a Bachelor of Engineering in Information Technology from <strong>Saigon University (SGU)</strong> with a cumulative <strong>GPA of 3.60 / 4.0</strong>.
               </p>
 
               <p>
-                Currently working at <strong>Fukuda.AI</strong> as a Software Tester, testing quotation and ERP systems, 3D models, 2D drawing extraction, and AI features. Previously, I completed a 4-month QA Internship at <strong>Alpaca Solutions</strong> validating Android mobile applications, designing comprehensive functional & regression test suites, and performing API verification.
+                Currently working at <strong>Fukuda.AI</strong> as a Software Tester, testing quotation and ERP systems, 3D models, 2D drawing extraction, and AI features. Previously, I completed a 4-month QA Internship at <strong>Alpaca Solutions</strong> validating Android mobile applications, designing comprehensive functional & regression test suites, and performing API verification. Currently building test automation skills with Playwright and TypeScript through a personal end-to-end framework project.
               </p>
 
               <p>

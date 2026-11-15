@@ -17,6 +17,9 @@ function VolunteerCard({ act }) {
             src={imageSrc}
             alt={act.org}
             className="volunteer-photo-img"
+            onError={(e) => {
+              e.currentTarget.parentElement.style.display = "none";
+            }}
           />
           {/* Badge overlay on top-left corner of image on mobile */}
           <div className="volunteer-badge-overlay">

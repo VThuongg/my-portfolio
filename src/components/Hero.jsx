@@ -65,7 +65,7 @@ export function Hero({ scrollTo }) {
           <div className="hero-visual-wrapper">
             <div className="hero-portrait-frame">
               <img
-                src="/portrait.jpg"
+                src={`${import.meta.env.BASE_URL}portrait.jpg`}
                 alt={OWNER_INFO.name}
                 className="hero-portrait-img"
                 onError={(e) => {

@@ -23,7 +23,7 @@ export const OWNER_INFO = {
   gpa: "GPA 3.60 / 4.0",
   github: "https://github.com/VThuongg",
   linkedin: "https://linkedin.com/in/vthuongg",
-  bio: "QA/QC Tester with hands-on experience in manual & automated software testing. Specializing in test case design, Postman API verification, and defect lifecycle management across SDLC/STLC.",
+  bio: "QA/QC Tester with hands-on experience in manual software testing, now building test automation skills with Playwright and TypeScript. Specializing in test case design, Postman API verification, and defect lifecycle management across SDLC/STLC.",
   status: "OPEN TO OPPORTUNITIES",
   issue: "ISSUE 2026 // VOL. 01"
 };
@@ -94,14 +94,15 @@ export const SKILLS_COMPETENCIES = [
   { label: "TEST CASE DESIGN", level: "ADVANCED", desc: "Equivalence partitioning, test matrix formulation, checklist & coverage optimization" },
   { label: "API TESTING", level: "PROFICIENT", desc: "Postman collections, HTTP status verification, header/payload validation & automated tests" },
   { label: "SQL / DATABASES", level: "PROFICIENT", desc: "Complex queries, joins, relational schema validation & database integrity checks" },
-  { label: "AUTOMATION TEST", level: "INTERMEDIATE", desc: "Python test automation scripts, workflow verification & assertions" },
+  { label: "AUTOMATION TEST", level: "INTERMEDIATE", desc: "Playwright + TypeScript framework, Page Object Model, CI pipeline" },
   { label: "BUG LIFECYCLE", level: "ADVANCED", desc: "Defect reproduction, severity/priority triage, root cause analysis & regression verification" }
 ];
 
 export const SKILLS_PERCENTAGES = SKILLS_COMPETENCIES;
 
 export const SKILLS_PILLS = [
-  "POSTMAN", "SQL", "PYTHON", "JAVA", "JAVASCRIPT", "TYPESCRIPT", 
+  "PLAYWRIGHT", "TYPESCRIPT", "PAGE OBJECT MODEL", "ALLURE",
+  "POSTMAN", "SQL", "PYTHON", "JAVA", "JAVASCRIPT", 
   "MYSQL", "POSTGRESQL", "REST APIS", "JSON", "GIT", "GITHUB ACTIONS", 
   "FIGMA", "CHATGPT", "CLAUDE", "EXCEL / SHEETS", "SDLC / STLC", "AGILE / SCRUM"
 ];
@@ -140,7 +141,7 @@ export const PROJECTS_DATA = [
     period: "JAN 2026 – MAY 2026",
     tech: "PYTHON, PYTORCH, HUGGINGFACE, XGBOOST",
     desc: "Multi-expert data processing pipeline and model evaluation system for automated protein function classification. Evaluated test datasets and metrics (Fmax 0.747, AuPRC 0.785).",
-    github: "https://github.com/VThuongg/protgo",
+    github: null,
     demo: null
   }
 ];
@@ -149,23 +150,23 @@ export const VOLUNTEER_DATA = [
   {
     num: "01",
     org: "Faculty of IT Youth Union, Saigon University",
-    role: "Executive Committee Member (2023 – 2024) → Standing Committee Member (2024 – 2026)",
+    role: "Executive Committee (2023–2024) → Standing Committee (2024–2026)",
     desc: "Served on the Faculty Youth Union's Executive Committee, then promoted to the Standing Committee. Helped plan and coordinate Youth Union activities for IT Faculty students, including community programs for children with disabilities.",
-    image: null
+    image: "images/volunteer-1.jpg"
   },
   {
     num: "02",
     org: "Mid-Autumn Festival Program",
     role: "Organizer // 2024, 2025 · Nguyen Dinh Chieu Special School",
     desc: "Organized Mid-Autumn Festival activities for students at Nguyen Dinh Chieu Special School.",
-    image: null
+    image: "images/volunteer-2.jpg"
   },
   {
     num: "03",
     org: "Lunar New Year (Tet) Program",
     role: "Organizer // 2025, 2026 · Nguyen Dinh Chieu Special School",
     desc: "Organized Tet celebration activities for students at Nguyen Dinh Chieu Special School.",
-    image: null
+    image: "images/volunteer-3.jpg"
   }
 ];
 
